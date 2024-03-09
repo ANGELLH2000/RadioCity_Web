@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight:400;  
+    font-style: normal;
+    color: white;
+}
+.LI{
+    font-style: italic;
+    font-weight:300;  
+    font-variation-settings:"slnt" -1;
+}
+body{
+    background-color:#1A1E1D;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba(26, 30, 29, 0.8);
+    border-bottom-style: solid;
+    border-bottom-width: .0625rem;
+    border-bottom-color: #ABA8A8;
+    height: 7.5rem;
+    width: 100%;
+    padding: 0rem 3rem;
+    z-index: 2;
+}
+header img{
+    height: 2.8rem;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 4rem;
+    
+}
+.pagina_actual a {
+    color: #FFC700;
+    font-weight: 600;
+}
+.inicioFondo{
+    width: 100%;
+    height: 50rem;
+    background-image: url("../assets/img/general/fondo.gif");
+    background-position: center;
+    background-size: cover;
+}
+.inicioFondo div{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: white;
+}
+.inicio{
+    width: 100%;
+    height: 50rem;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.inicio video{
+    width: 100%;
+}
+.textoInicio{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    margin: 0 10%;
+    margin-top: 20%;
+    font-weight: 700;
+}
+.paginaContacto div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20%;
+}
+.paginaContacto div h2{
+    font-size: 4.375rem;
+    font-weight: 600;
+    padding: 1.875rem 0;
+    text-transform: uppercase;
+}
+.paginaContacto div p{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.presentacion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 6.25rem 0px;
+}
+.presentacion div{
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentacion div p{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: .75rem;
+    font-weight:300; 
+}
+.presentacion div p span{
+    font-weight: 600;
+}
+.barra{
+    width: 48%;
+    height:.5rem;
+    background-color: #FFC700;
+}
+.playlist{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.75rem;
+}
+.playlist div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playlist div div{
+    width: 48%;
+    height:.5rem;
+    background-color: #FFC700;
+    
+}
+.playlist div h2{
+    padding: 5rem 0;
+}
+.barra1{
+    align-self: self-start;
+}
+.barra2{
+    align-self: self-end;
+}
+.spotify{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding: 4.5rem;
+}
+.programacion{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10.5rem;
+    padding: 0 7.5rem;
+}
+.programacion h2{
+    font-size: 2.5rem;
+    margin-bottom: .7rem;
+}
+.programacion p{
+    font-size: 1.5rem;
+    font-weight: 300;  
+}
+.programa{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(255, 200, 0, 0.3);
+    margin-bottom: .625rem;
+    padding-top: .5rem;
+    padding-left: .25rem;
+}
+.T2h {
+    height: 12.5rem;
+}
+.T3h{
+    height: 18.75rem;
+}
+.T4h{
+    height: 25rem;
+}
+.dia{
+    padding: 2rem 0;
+    margin: 0 1rem;
+}
+.dia p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.programacionSemanal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 600px;
+    overflow-y:scroll;
+    scrollbar-color: rgba(255, 200, 0, 0.3) transparent;
+    scrollbar-width:thin;
+}
+.presentador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentador img{
+    width: 9.375rem;
+    height: auto;
+    border-radius: 50%;
+}
+.presentador p{
+    margin-top: .5rem;
+    font-size: 2rem;
+}
+.presentadores{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%;
+    margin-top: -8rem;
+}
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding:  1.875rem;
+    background-color: rgba(215, 245, 123, 0.55);
+    text-align: center;
+}
+.descripcion{
+    font-size: 2rem;
+    padding: 3.75rem 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    border-bottom-left-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+    overflow: hidden;
+}
+.portada{
+    width: 100%;
+}
+.programaActual{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5rem;
+    padding: 0 7.5rem;
+}
+.contendorPrograma{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 1.875rem 0;
+}
+.programaActual h2{
+    font-size: 2rem;
+}
+.programaActual h3{
+    font-size: 4rem;
+    margin-bottom: 1.25rem  ;
+}
+.artistaMusica{
+    background-image: url(../assets/img/general/mus1.jpg); 
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+.fondo{
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 7rem;
+}
+.frameVideo{
+    width: 60%;
+}
+.infoVideo{
+    width: 40%;
+    padding: 0 1.875rem;
+}
+.infoVideo h3{
+    font-size: 1.8rem;
+    font-weight:600;
+    margin-bottom: .5rem;
+}
+.infoVideo p{
+    font-size: 1.5rem;
+    font-weight:300;
+}
+.topCanciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .1);
+}
+.topCanciones h2{
+    font-size: 2.5rem;
+    margin: 3rem 0;
+}
+.listaCanciones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    padding-bottom: 5rem;
+}
+.listaCanciones iframe{
+    margin: 1.25rem;
+}.bandaMes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin-bottom: 3.75rem;
+}
+.bandaMes h2{
+    font-size: 2.5rem;
+    margin: 3rem 0;
+    text-transform:uppercase;
+}
+.infoBanda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../assets/img/general/GIT_Banda.jpg);
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height: 56.25rem;
+    padding: 12.5rem;
+    margin-bottom: 3.75rem;
+}
+.infoBanda p{
+    font-size: 1.875rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 1.25rem;
+}
+.fotosBanda{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+.fotosBanda img{
+    height: 21.25rem;
+    width: auto;
+    margin: 2.5rem;
+}
+.noticias{
+    margin-top: 200px;
+}
+.noticia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.125rem;
+}
+.noticia a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.noticia a h4{
+    font-size: 2rem;
+    background-color: #474747;
+    padding: 1.25rem .625rem;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3.75rem 0;
+}
+.formulario form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    padding: 2.5rem 0;
+}
+.formulario form label{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+.formulario form input{
+    margin-bottom: 1.5rem;
+    background-color: rgba(96, 96, 96, 0.4);
+    border: 0;
+    outline: none;
+    font-size: 1.25rem;
+    height: 2.25rem;
+    padding: 0 .5rem;
+}
+.formulario form textarea{
+    padding: .5rem;
+    font-size: 1.25rem;
+    background-color: rgba(96, 96, 96, 0.4);
+    border: 0;
+    outline: none;
+}
+.enviar{
+    width: 25%;
+    color: #333333;
+    background-color:#FFC700;
+    border: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .5rem;   
+}
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333333;
+    padding-top: 5rem;
+}
+.imgFooter{
+    width: 15%;
+}
+footer h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.footerContacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+}
+.footerContacto div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.footerRedes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+}
+.footerRedes div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
+.iconTexto{
+    display: flex;
+    gap: .5rem;
+}
+.iconTexto img{
+    height: 2rem;
+}
+.iconTexto p{
+    font-size: 1.5rem;
+}
+
