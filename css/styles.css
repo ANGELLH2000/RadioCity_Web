@@ -521,6 +521,7 @@ footer h3{
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    width: 25rem;
 }
 .target .top,.bottom{
     display: flex;
@@ -552,8 +553,61 @@ footer h3{
     font-size: 1.5rem;
 }
 
+.ProgramaciónDiariaSection{
+    background-color: #131111;
+    display: flex;
+    justify-content: center;
+    
+}
+.ProgramaciónDiariaSection .contenedor{
+    width: 90rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.1875rem;
+    padding: 4.6875rem 0;
+}
+
+.TSection{
+    align-self:flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1.1875rem;
+}
+.TSection p{
+    color: white;
+    font-size: 1.875rem;
+}
+.bar_title{
+    width: .5rem;
+    height: 2.5rem;
+    background-color: #FFC700;
+}
+.gridTargets{
+    max-width: 90rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    gap: 2rem;
+    justify-items: center;
+}
+
 /*Tablet*/
+@media(max-width:81.25rem){
+    /*Inicio Diseño section ProgramacionDiaria*/
+    .ProgramaciónDiariaSection .contenedor{
+        gap: 2.5rem;
+        padding: 4.6875rem 0;
+    }
+    .gridTargets{
+        grid-template-columns: repeat(2,1fr); 
+        gap: auto ;
+    }
+    /*Fin Diseño section ProgramacionDiaria*/
+}
 @media(max-width: 49.375rem ){
+
+    /*Inicion -- Diseño de TargetHorario*/
     .target{
         max-width: 21.875rem;
         min-height: 14.375rem;
@@ -564,11 +618,28 @@ footer h3{
     .target-hora h5{
         font-size: .875rem;
     }
+    /*Fin -- Diseño de TargetHorario*/
+
 
 }
 
 /*Phone*/
+@media(max-width:43.75rem){
+    /*Inicio Diseño section ProgramacionDiaria*/
+    .ProgramaciónDiariaSection .contenedor{
+        gap: 2.5rem;
+        padding: 4.6875rem 0;
+    }
+    .gridTargets{
+        grid-template-columns: repeat(1,1fr); 
+        gap: auto ;
+    }
+    /*Fin Diseño section ProgramacionDiaria*/
+}
 @media(max-width:26.5625rem){
+
+
+    /*Inicion -- Diseño de TargetHorario*/
     .target{
         max-width: 18.75rem;
         min-height: 11.4375rem;
@@ -586,4 +657,5 @@ footer h3{
     .target-hora h5{
         font-size: .75rem;
     }
+    /*Fin -- Diseño de TargetHorario*/
 }
