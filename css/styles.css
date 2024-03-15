@@ -557,7 +557,6 @@ footer h3{
     background-color: #131111;
     display: flex;
     justify-content: center;
-    
 }
 .ProgramaciónDiariaSection .contenedor{
     width: 90rem;
@@ -596,8 +595,9 @@ footer h3{
 @media(max-width:81.25rem){
     /*Inicio Diseño section ProgramacionDiaria*/
     .ProgramaciónDiariaSection .contenedor{
+        width: 100vw;
         gap: 2.5rem;
-        padding: 4.6875rem 0;
+        padding: 4.6875rem 0px;
     }
     .gridTargets{
         grid-template-columns: repeat(2,1fr); 
@@ -622,7 +622,7 @@ footer h3{
 }
 
 /*Phone*/
-@media(max-width:43.75rem){
+@media(max-width:47.5rem){
     /*Inicio Diseño section ProgramacionDiaria*/
     .ProgramaciónDiariaSection .contenedor{
         gap: 2.5rem;
