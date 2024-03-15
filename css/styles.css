@@ -605,7 +605,7 @@ footer h3{
     }
     /*Fin Diseño section ProgramacionDiaria*/
 }
-@media(max-width: 49.375rem ){
+@media(max-width: 56.25rem){
 
     /*Inicion -- Diseño de TargetHorario*/
     .target{
