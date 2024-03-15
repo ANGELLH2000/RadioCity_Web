@@ -480,18 +480,24 @@ footer h3{
 .iconTexto p{
     font-size: 1.5rem;
 }
+.targetOn{
+    border-bottom: .1875rem solid #FFC700;
+}
+.targetOff{
+    border-bottom: .1875rem solid #323232;
+}
 .target{
     max-width: 25rem;
     min-height: 14.8125rem;
     border-radius: 1.25rem;
     background-color: #323232;
-    border-bottom: .1875rem solid #323232;
     padding: 1.25rem .9375rem;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 .color80{
     color: rgb(255, 255, 255 , .8);
+    font-weight: 300;
 }
 .color_estado_red{
     background-color: rgba(246, 91, 119, 0.2);
@@ -523,7 +529,6 @@ footer h3{
 }
 .target .top div{
     font-size: 1.125rem;
-    font-weight: 500;
     display: flex;
     gap:.625rem;
 }
@@ -545,4 +550,40 @@ footer h3{
 }
 .target-hora p{
     font-size: 1.5rem;
+}
+
+/*Tablet*/
+@media(max-width: 49.375rem ){
+    .target{
+        max-width: 21.875rem;
+        min-height: 14.375rem;
+    }
+    .target h5{
+        font-size: 1.75rem;
+    }
+    .target-hora h5{
+        font-size: .875rem;
+    }
+
+}
+
+/*Phone*/
+@media(max-width:26.5625rem){
+    .target{
+        max-width: 18.75rem;
+        min-height: 11.4375rem;
+        gap: 1.5625rem;
+    }
+    .target .top div{
+        font-size: .875rem;
+    }
+    .target .top div img{
+        height: .875rem;
+    }
+    .target h5,.target-hora p{
+        font-size: 1.25rem;
+    }
+    .target-hora h5{
+        font-size: .75rem;
+    }
 }
