@@ -480,4 +480,69 @@ footer h3{
 .iconTexto p{
     font-size: 1.5rem;
 }
-
+.target{
+    max-width: 25rem;
+    min-height: 14.8125rem;
+    border-radius: 1.25rem;
+    background-color: #323232;
+    border-bottom: .1875rem solid #323232;
+    padding: 1.25rem .9375rem;
+    display: flex;
+    flex-direction: column;   
+}
+.color80{
+    color: rgb(255, 255, 255 , .8);
+}
+.color_estado_red{
+    background-color: rgba(246, 91, 119, 0.2);
+    color: #F65B77;
+    border-radius: .625rem;
+    padding: .1875rem .625rem;
+}
+.color_estado_grey{
+    background-color: rgb(201, 201, 201 ,.2);
+    color: #BFBFBF;
+    border-radius: .625rem;
+    padding: .1875rem .625rem;
+}
+.color_estado_yellow{
+    background-color: rgb(255, 199, 0, .2);
+    color: #FFC700;
+    border-radius: .625rem;
+    padding: .1875rem .625rem;
+}
+.target{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.target .top,.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.target .top div{
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: flex;
+    gap:.625rem;
+}
+.target .top div img{
+    height: 1.25rem;
+}   
+.target h5{
+    font-size: 2rem;
+    color: white;
+    align-self: center;
+}
+.target-hora{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.target-hora h5{
+    font-size: 1rem;
+}
+.target-hora p{
+    font-size: 1.5rem;
+}
