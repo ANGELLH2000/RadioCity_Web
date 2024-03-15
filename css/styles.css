@@ -619,8 +619,6 @@ footer h3{
         font-size: .875rem;
     }
     /*Fin -- Diseño de TargetHorario*/
-
-
 }
 
 /*Phone*/
@@ -637,8 +635,6 @@ footer h3{
     /*Fin Diseño section ProgramacionDiaria*/
 }
 @media(max-width:26.5625rem){
-
-
     /*Inicion -- Diseño de TargetHorario*/
     .target{
         max-width: 18.75rem;
