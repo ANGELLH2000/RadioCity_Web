@@ -552,11 +552,69 @@ footer h3{
 .target-hora p{
     font-size: 1.5rem;
 }
-
-.ProgramaciónDiariaSection{
+.fondoContenedor{
     background-color: #131111;
     display: flex;
     justify-content: center;
+}
+.t24px{
+    font-size: 1.5rem;
+}
+.t20px{
+    font-size: 1.25rem;
+}
+.programaActual{
+    width: 90rem;
+    display: grid;
+    grid-template-areas: 
+    "title title title title title"
+    "img  conductores dias hora ."
+    "descripcion descripcion descripcion descripcion descripcion "
+    ;
+    grid-template-columns: 15.625rem repeat(4,auto) ;
+    padding: 4.5rem 0;
+    row-gap: 2.9375rem;
+    column-gap: 2.875rem;
+}
+.NombrePresentadores,.DiasPrograma,.HoraPrograma{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .875rem;
+    background-color: #333333;
+    padding: .625rem 1.25rem;
+    border-radius: 1rem;
+}
+.programaActual div:nth-child(1){
+    grid-area: title;
+}
+.programaActual div:nth-child(2){
+    grid-area: img;
+    max-width: 15.625rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3.125rem;
+}   
+.programaActual div:nth-child(3){
+    grid-area: conductores;
+}
+.programaActual div:nth-child(4){
+    grid-area: dias;
+}
+.programaActual div:nth-child(5){
+    grid-area: hora;
+}
+.programaActual div:nth-child(6){
+    grid-area: descripcion;
+    display: grid;
+    row-gap: 20px;
+}
+
+.presentadoresPrograma img{
+    object-fit: cover;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;  
 }
 .ProgramaciónDiariaSection .contenedor{
     width: 90rem;
@@ -578,10 +636,11 @@ footer h3{
     color: white;
     font-size: 1.875rem;
 }
-.bar_title{
+.TSection :first-child{
     width: .5rem;
     height: 2.5rem;
     background-color: #FFC700;
+    border-radius: .625rem;
 }
 .gridTargets{
     max-width: 90rem;
