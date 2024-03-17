@@ -16,6 +16,21 @@
 .t20-16px{
     font-size: 1.25rem;
 }
+.t32-18px{
+    font-size: 2rem;
+}
+.t40-18px{
+    font-size: 2.5rem;
+}
+.t30-16px{
+    font-size: 30px;
+}
+.fw300{
+    font-weight: 300;
+}
+.fw600{
+    font-weight: 600;
+}
 .LI{
     font-style: italic;
     font-weight:300;  
@@ -285,94 +300,126 @@ header nav ul li a{
     font-size: 4rem;
     margin-bottom: 1.25rem  ;
 }
-.artistaMusica{
-    background-image: url(../assets/img/general/mus1.jpg); 
-    background-position: center;
-    background-size: cover;
-    display: flex;
-}
-.fondo{
+.contenedorSeccion-artistaMusica{
     width: 100%;
-    height: 50rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px;
+    justify-items: center;
+
+}
+.contenedorSeccion-artistaMusica img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: -1;
+}
+.artistaMusica{
+    background-color: rgb(0, 0, 0,0.6);
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,max(43.75rem)) 1fr;
+    align-content: center;
+    column-gap: 1.5rem;
+}
+.artistaMusica div:nth-child(1){
+    grid-column: 2/3;
+
+}
+.artistaMusica :nth-child(2){
+    grid-column: 3/4;
+    font-size: 18px;
     display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0 7rem;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+    line-height: 25px;
 }
-.frameVideo{
-    width: 60%;
-}
-.infoVideo{
-    width: 40%;
-    padding: 0 1.875rem;
-}
-.infoVideo h3{
-    font-size: 1.8rem;
-    font-weight:600;
-    margin-bottom: .5rem;
-}
-.infoVideo p{
-    font-size: 1.5rem;
-    font-weight:300;
+.contenedorSeccion-topCanciones{
+    width: 100%;
+    background-color: rgba(255, 255, 255, .1);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 .topCanciones{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, .1);
+    width: 87.5rem;
+    padding: 3.75rem 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+    row-gap: 1.875rem;
+    
 }
 .topCanciones h2{
-    font-size: 2.5rem;
-    margin: 3rem 0;
+    grid-column: 1/-1;
 }
-.listaCanciones{
+/*-----------------------------------------------*/
+.tituloBanda{
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    height: 11.25rem;
     justify-content: center;
-    width: 80%;
-    padding-bottom: 5rem;
+    align-items: center;
+    text-transform: uppercase;
 }
-.listaCanciones iframe{
-    margin: 1.25rem;
-}.bandaMes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    margin-bottom: 3.75rem;
+.contenedorSeccion-bandaMes{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px;
+    justify-items: center;
+
 }
-.bandaMes h2{
-    font-size: 2.5rem;
-    margin: 3rem 0;
-    text-transform:uppercase;
+.contenedorSeccion-bandaMes img:first-child{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: -1;
 }
 .infoBanda{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(../assets/img/general/GIT_Banda.jpg);
-    background-position: center;
-    background-size: cover;
-    width:100%;
-    height: 56.25rem;
-    padding: 12.5rem;
-    margin-bottom: 3.75rem;
+    background-color: rgb(0, 0, 0,0.6);
+    width: 100%;
+    height: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,max(43.75rem)) 1fr;
+    grid-template-rows: auto 20.0625rem;
+    grid-template-areas:
+    " . p p ."
+    " . img1 img2 ."
+    ;
+    row-gap: 3.125rem;
+    align-content: center;
 }
 .infoBanda p{
-    font-size: 1.875rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    grid-area: p;
     text-align: center;
-    padding: 1.25rem;
+    
 }
-.fotosBanda{
-    width: 100%;
-    display: flex;
-    justify-content:space-between;
-}
-.fotosBanda img{
-    height: 21.25rem;
+.contenedorSeccion-bandaMes img{
     width: auto;
-    margin: 2.5rem;
+    height: 100%;
+    justify-self: center;
 }
+.contenedorSeccion-bandaMes img:nth-child(2) {
+    grid-area: img1;
+}
+.contenedorSeccion-bandaMes img:nth-child(3) {
+    grid-area: img2;
+}
+
+
+/*-----------------------------------------------*/
 .noticias{
     margin-top: 200px;
 }
