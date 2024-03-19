@@ -25,6 +25,9 @@
 .t30-28-16px{
     font-size: 30px;
 }
+.t32-28-16px{
+    font-size: 32px;
+}
 .fw300{
     font-weight: 300;
 }
@@ -440,23 +443,30 @@ header nav ul li a{
 }
 
 /*-----------------------------------------------*/
-.noticias{
-    margin-top: 200px;
+.seccionNoticias{
+    margin-top: 9.375rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(15.625rem,81.25rem) 1fr;
+    grid-template-rows: auto;
+    row-gap: 1.875rem;
+}
+.seccionNoticias article{
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 .noticia{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3.125rem;
 }
 .noticia a{
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
 }
 .noticia a h4{
-    font-size: 2rem;
     background-color: #474747;
     padding: 1.25rem .625rem;
 }
@@ -726,6 +736,18 @@ footer h3{
     .t30-28-16px{
         font-size: 1.75rem;
     }
+    /*Incio de Seccion Noticias*/
+    .seccionNoticias{
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(1fr,81.25rem);
+        grid-template-rows: auto;
+        row-gap: 1.875rem;
+    }
+    .seccionNoticias article{
+        grid-column: 1/-1;
+    }
+    /*Fin de Seccion Noticias*/
     /*Incio de Seccion ArtistaMusica*/
     .artistaMusica{
         padding: 0  2rem;
@@ -779,6 +801,16 @@ footer h3{
     /*Fin de Seccion ProgramaActual*/
 }
 @media(max-width: 56.25rem){
+    .t32-28-16px{
+        font-size: 28px;
+    }
+
+    /*Inicio de Seccion Noticias*/
+    .noticia a{
+        width: 80%;
+    }
+    /*Fin de Seccion Noticias*/
+
     /*Inicio de Seccion AristaMusica*/
     .artistaMusica{
         grid-template-columns: 1fr;
@@ -831,6 +863,9 @@ footer h3{
 
 /*Phone*/
 @media(max-width:47.5rem){
+    .t32-28-16px{
+        font-size: 16px;
+    }
     /*Inicio de Seccion AristaMusica*/
     .artistaMusica{
         grid-template-rows: minmax(auto,300px) auto;
