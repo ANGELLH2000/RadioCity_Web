@@ -91,6 +91,7 @@ header nav ul li a{
 }
 .contenedorInicio{
     width: 100%;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr repeat(2,40.625rem) 1fr;
     grid-template-rows: minmax(auto,800px) auto auto;
@@ -791,6 +792,7 @@ footer h3{
         ;
     }
     .contenedorInicio .video{
+        width: 100%;
         grid-column: 1/3;
         grid-row: 1/2;
     }
@@ -1022,6 +1024,11 @@ footer h3{
     .t30-28-16px{
         font-size: 16px;
     }
+    /*Inicio de Seccion ContenedorInicio*/
+    .presentacion div p img{
+        width: 200px;
+    }
+    /*Fin de Seccion ContenedorInicio*/
     /*Inicio de Seccion Top Canciones*/
     .topCanciones iframe{
         width:70%;
@@ -1032,7 +1039,7 @@ footer h3{
         
     }
     /*Fin de Seccion Top Canciones*/
-}
+    }
 @media(max-width:26.875rem){
     
     .t32-18px{
