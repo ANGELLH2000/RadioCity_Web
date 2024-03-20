@@ -68,7 +68,7 @@ header{
     height: 7.5rem;
     width: 100%;
     padding: 0rem 3rem;
-    z-index: 2;
+    z-index: 99;
 }
 header img{
     height: 2.8rem;
@@ -1028,6 +1028,9 @@ footer h3{
     .presentacion div p img{
         width: 200px;
     }
+    .spotify{
+        padding: 4.5rem 16px;
+    }
     /*Fin de Seccion ContenedorInicio*/
     /*Inicio de Seccion Top Canciones*/
     .topCanciones iframe{
@@ -1047,6 +1050,12 @@ footer h3{
     }
     .t28-18px{
         font-size: 1.25rem;
+    }
+    .t32-24-16px{
+        font-size: 1rem;
+    }
+    .t40-24-18px{
+        font-size: 1rem;
     }
     /*Inicio de Seccion TituloBanda*/
     .tituloBanda{
