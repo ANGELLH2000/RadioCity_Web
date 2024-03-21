@@ -560,49 +560,53 @@ header img{
 }
 footer{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background-color: #333333;
-    padding-top: 5rem;
+    display: grid;
+    grid-template-areas: 
+    ".footer."
+    ;
+    grid-template-columns: 1fr 1300px 1fr;
 }
-.imgFooter{
-    width: 15%;
+.contenedorFooter{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+    grid-area: footer;
+    display: grid;
+    border:2px solid rebeccapurple;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "logo contacto redes";
+    align-items: center;
+    font-size: 24px;
+    color: white;
 }
-footer h3{
-    font-size: 1.5rem;
-    font-weight: 600;
+.footerLogo{
+    grid-area: logo;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .footerContacto{
+    grid-area: contacto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 30%;
+    align-items : center;
+    gap: 20px;
 }
-.footerContacto div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1rem;
-}
-
 .footerRedes{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 30%;
+    grid-area: redes;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
 }
-.footerRedes div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1rem;
+.footerRedes h3{
+    grid-column: 1/-1;
 }
 .iconTexto{
+    text-decoration: none;
     display: flex;
     gap: .5rem;
 }
@@ -782,6 +786,22 @@ footer h3{
     .t30-28-16px{
         font-size: 1.75rem;
     }
+    /*Footer*/
+    footer{
+        grid-template-areas: 
+        "footer"
+        ;
+        grid-template-columns: 1fr;
+    }
+    .iconTexto p{
+        font-size: 1rem;
+    }
+    .iconTexto img{
+        height: 1.5rem;
+    }
+    /*Footer*/
+
+
     /*Incio de Seccion ContenedorInicio*/
     .contenedorInicio{
         grid-template-columns:1fr 1fr;
@@ -946,6 +966,14 @@ footer h3{
     .t32-28-16px{
         font-size: 28px;
     }
+    /*Footer*/
+    .contenedorFooter{
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(100px,auto);
+        grid-template-areas: "logo""contacto" "redes";
+        gap: 1.8rem;
+    }
+    /*Footer*/
     /*Inicio de Seccion ContenedorInicio*/
     .contenedorInicio{
         grid-template-columns: 1fr;
@@ -1043,7 +1071,9 @@ footer h3{
     /*Fin de Seccion Top Canciones*/
     }
 @media(max-width:26.875rem){
-    
+    .t32-28-16px{
+        font-size: 16px;
+    }
     .t32-18px{
         font-size: 1.25rem;
     }
