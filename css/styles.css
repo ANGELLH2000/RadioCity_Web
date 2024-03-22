@@ -78,7 +78,10 @@ header img{
 .navbar-nav{
     gap: 1.25rem;
 }
-
+.fondoNav{
+    background-color: rgba(26, 30, 29, 0.9);
+    padding-left: .625rem;
+}
 .contenedorInicio{
     width: 100%;
     overflow: hidden;
@@ -172,23 +175,107 @@ header img{
 .presentacion:hover .tocame {
     font-size: 42px;
 }
-.paginaContacto div{
+.contenedorContacto{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1300px 1fr;
+    grid-template-areas: 
+    ". tituloContacto ." 
+    ". formulario .";
+    grid-template-rows: 37.5rem auto;
+}
+.fondoContacto{
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: -3;
+    opacity: .2;
+    background-image: url("https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    overflow:hidden;
+}
+.tituloContacto{
+    grid-area: tituloContacto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20%;
 }
-.paginaContacto div h2{
-    font-size: 4.375rem;
-    font-weight: 600;
-    padding: 1.875rem 0;
-    text-transform: uppercase;
-}
-.paginaContacto div p{
-    font-size: 2.5rem;
+.tituloContacto p,.tituloContacto h2{
+    height: auto;
+    padding: 0 .625rem;
     text-align: center;
 }
+.formulario{
+    grid-area: formulario;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+.formulario form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group {
+    position: relative;
+    margin: 12px 0;
+}
+
+.form-group input,.form-group textarea {
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: #acacac solid 2px;
+    background-color: transparent;
+    color: #eee;
+    transition: 0.15s all ease;
+}
+
+.form-group input:focus ,.form-group textarea:focus{
+    border-color: #eee;
+}
+
+.form-group input::placeholder ,.form-group textarea::placeholder{
+    color: transparent;
+}
+
+.form-group .form-label {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #acacac;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+
+.form-group input:focus + .form-label,
+.form-group input:not(:placeholder-shown) + .form-label,
+.form-group textarea:focus + .form-label,
+.form-group textarea:not(:placeholder-shown) + .form-label{
+    transform: translate(5px, -22px);
+    background-color: #383838;
+    font-size: 14px;
+    color: #eee;
+}
+.enviar{
+    max-width: 200px;
+    color: #333333;
+    background-color:#FFC700;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .5rem;   
+}
+/*/////////////////////////////////////////*/
 .barra{
     width: 48%;
     height:.5rem;
@@ -486,8 +573,6 @@ header img{
     align-items: center;
     padding: 2.5rem 0;
 }
-
-/*-----------------------------------------------*/
 .seccionNoticias{
     margin-top: 9.375rem;
     width: 100%;
@@ -515,48 +600,6 @@ header img{
     color: white;
     background-color: #474747;
     padding: 1.25rem .625rem;
-}
-.formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3.75rem 0;
-}
-.formulario form{
-    width: 40%;
-    display: flex;
-    flex-direction: column;;
-    justify-content: center;
-    padding: 2.5rem 0;
-}
-.formulario form label{
-    font-size: 1.5rem;
-    margin-bottom: .5rem;
-}
-.formulario form input{
-    margin-bottom: 1.5rem;
-    background-color: rgba(96, 96, 96, 0.4);
-    border: 0;
-    outline: none;
-    font-size: 1.25rem;
-    height: 2.25rem;
-    padding: 0 .5rem;
-}
-.formulario form textarea{
-    padding: .5rem;
-    font-size: 1.25rem;
-    background-color: rgba(96, 96, 96, 0.4);
-    border: 0;
-    outline: none;
-}
-.enviar{
-    width: 25%;
-    color: #333333;
-    background-color:#FFC700;
-    border: 0;
-    font-size: 2rem;
-    font-weight: 600;
-    padding: .5rem;   
 }
 footer{
     width: 100%;
@@ -785,6 +828,14 @@ footer{
     .t30-28-16px{
         font-size: 1.75rem;
     }
+    /* Inicio Sección Noticias*/
+    .contenedorContacto{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "tituloContacto" 
+        "formulario";
+    }
+    /* Fin Sección Noticias*/
     /*Footer*/
     footer{
         grid-template-areas: 
@@ -965,6 +1016,11 @@ footer{
     .t32-28-16px{
         font-size: 28px;
     }
+    /* Inicio Sección Noticias*/
+    .contenedorContacto{
+        grid-template-rows: 400px auto;
+    }
+    /* Fin Sección Noticias*/
     /*Footer*/
     .contenedorFooter{
         grid-template-columns: 1fr;
