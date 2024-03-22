@@ -573,7 +573,6 @@ footer{
     width: 100%;
     grid-area: footer;
     display: grid;
-    border:2px solid rebeccapurple;
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: "logo contacto redes";
     align-items: center;
