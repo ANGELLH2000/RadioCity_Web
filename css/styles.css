@@ -597,6 +597,7 @@ header img{
     width: 60%;
 }
 .noticia a h4{
+    text-align: center;
     color: white;
     background-color: #474747;
     padding: 1.25rem .625rem;
