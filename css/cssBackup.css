@@ -1,0 +1,1187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight:400;  
+    font-style: normal;
+    color: white;
+}
+.mt120px{
+    margin-top: 120px;
+}
+.t24-18px{
+    font-size: 1.5rem;
+}
+.t28-18px{
+    font-size: 1.75rem;
+}
+.t20-16px{
+    font-size: 1.25rem;
+}
+.t32-18px{
+    font-size: 2rem;
+}
+.t30-28-16px{
+    font-size: 30px;
+}
+.t32-28-16px{
+    font-size: 32px;
+}
+.t32-24-16px{
+    font-size: 32px;
+}
+.t40-24-18px{
+    font-size: 40px;
+}
+.t72-40-24px{
+    font-size: 72px;
+}
+.fw300{
+    font-weight: 300;
+}
+.fw400{
+    font-weight: 400;
+}
+.fw600{
+    font-weight: 600;
+}
+body{
+    background-color:#1A1E1D;
+}
+.fixed-top{
+    border-bottom:1px solid white;
+    padding: 0;
+}
+.container-fluid{
+    background-color: rgba(26, 30, 29, 0.8);
+    height: 100px;
+    padding: 0 30px;
+}
+.navbar-nav .nav-link.active,.nav-link {
+    font-family: "Inter", sans-serif;
+    font-weight:400;  
+    font-style: normal;
+    color: white;
+    font-size: 2rem;
+}
+.navbar-nav .nav-link.active{
+    font-weight:600; 
+    color: #FFC700;
+}
+.nav-link:hover{
+    color: #FFC700;
+}
+header img{
+    height: 2.8rem;
+}
+.navbar-nav{
+    gap: 1.25rem;
+}
+.fondoNav{
+    background-color: rgba(26, 30, 29, 0.9);
+    padding-left: .625rem;
+}
+.contenedorInicio{
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,40.625rem) 1fr;
+    grid-template-rows: minmax(auto,800px) auto auto;
+    grid-template-areas:
+    ". presentacion presentacion ."
+    ". playlist playlist ."
+    ;
+}
+.contenedorInicio .video{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    z-index: -1;
+    justify-self: center;
+    width: 100%;
+    overflow: hidden;
+}
+.contenedorInicio .video video{
+    width: 100%;
+}
+.presentacion{
+    grid-area: presentacion;
+    z-index: 2;
+    width: 100%;
+    align-self: center;
+}
+.presentacion div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentacion div p{
+    text-align: center;
+}
+.presentacion div p:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.presentacion div p:nth-child(1) img{
+    height: 60px;
+    padding: 0 10px;
+}
+.presentacion div p:nth-child(2){
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.presentacion div p:nth-child(3){
+    width: 80%;
+}
+.presentacion div p:nth-child(4){
+    transform: translate(0, 50px);
+}
+.presentacion div p:nth-child(5){
+    transform: translate(0, 50px);
+    display: flex;
+    flex-direction: column;
+}
+.presentacion div p span:nth-child(2){
+    margin-top: -2rem;
+}
+.ic--outline-menu {
+    display: inline-block;
+    width: 2em;
+    height:2em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z'/%3E%3C/svg%3E");
+}
+.line-md--chevron-down {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg transform='rotate(-90 12 12)'%3E%3Cpath fill='none' stroke='%23000' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='round' stroke-width='2' d='M8 12L15 5M8 12L15 19'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='2s' values='10;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");       
+    background-color: white;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;}
+.presentacion:hover .line-md--chevron-down{
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: #FFC700;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg transform='rotate(-90 12 12)'%3E%3Cpath fill='none' stroke='%23000' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='round' stroke-width='2' d='M8 12L15 5M8 12L15 19'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='2s' values='10;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");       
+}
+.presentacion:hover .tocame {
+    font-size: 42px;
+}
+.contenedorContacto{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1300px 1fr;
+    grid-template-areas: 
+    ". tituloContacto ." 
+    ". formulario .";
+    grid-template-rows: 37.5rem auto;
+}
+.fondoContacto{
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: -3;
+    opacity: .2;
+    background-image: url("https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    overflow:hidden;
+}
+.tituloContacto{
+    grid-area: tituloContacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tituloContacto p,.tituloContacto h2{
+    height: auto;
+    padding: 0 .625rem;
+    text-align: center;
+}
+.formulario{
+    grid-area: formulario;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+.formulario form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group {
+    position: relative;
+    margin: 12px 0;
+}
+
+.form-group input,.form-group textarea {
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: #acacac solid 2px;
+    background-color: transparent;
+    color: #eee;
+    transition: 0.15s all ease;
+}
+
+.form-group input:focus ,.form-group textarea:focus{
+    border-color: #eee;
+}
+
+.form-group input::placeholder ,.form-group textarea::placeholder{
+    color: transparent;
+}
+
+.form-group .form-label {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    font-size: 18px;
+    padding: 0 10px;
+    color: #acacac;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+
+.form-group input:focus + .form-label,
+.form-group input:not(:placeholder-shown) + .form-label,
+.form-group textarea:focus + .form-label,
+.form-group textarea:not(:placeholder-shown) + .form-label{
+    transform: translate(5px, -22px);
+    background-color: #383838;
+    font-size: 14px;
+    color: #eee;
+}
+.enviar{
+    max-width: 200px;
+    color: #333333;
+    background-color:#FFC700;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .5rem;   
+}
+/*/////////////////////////////////////////*/
+.barra{
+    width: 48%;
+    height:.5rem;
+    background-color: #FFC700;
+}
+.playlist{
+    grid-area: playlist;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.75rem;
+}
+.playlist div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playlist div div{
+    width: 48%;
+    height:.5rem;
+    border-radius: 10px;
+    background-color: #FFC700;
+    
+}
+.playlist div h2{
+    padding: 3rem 1rem;
+    text-align: center;
+}
+.barra1{
+    align-self: self-start;
+}
+.barra2{
+    align-self: self-end;
+}
+.spotify{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding: 4.5rem;
+}
+.programacion{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10.5rem;
+    padding: 0 7.5rem;
+}
+.programacion h2{
+    font-size: 2.5rem;
+    margin-bottom: .7rem;
+}
+.programacion p{
+    font-size: 1.5rem;
+    font-weight: 300;  
+}
+.programa{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(255, 200, 0, 0.3);
+    margin-bottom: .625rem;
+    padding-top: .5rem;
+    padding-left: .25rem;
+}
+.T2h {
+    height: 12.5rem;
+}
+.T3h{
+    height: 18.75rem;
+}
+.T4h{
+    height: 25rem;
+}
+.dia{
+    padding: 2rem 0;
+    margin: 0 1rem;
+}
+.dia p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.programacionSemanal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 600px;
+    overflow-y:scroll;
+    scrollbar-color: rgba(255, 200, 0, 0.3) transparent;
+    scrollbar-width:thin;
+}
+.presentador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentador img{
+    width: 9.375rem;
+    height: auto;
+    border-radius: 50%;
+}
+.presentador p{
+    margin-top: .5rem;
+    font-size: 2rem;
+}
+.presentadores{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%;
+    margin-top: -8rem;
+}
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding:  1.875rem;
+    background-color: rgba(215, 245, 123, 0.55);
+    text-align: center;
+}
+.descripcion{
+    font-size: 2rem;
+    padding: 3.75rem 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    border-bottom-left-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+    overflow: hidden;
+}
+.portada{
+    width: 100%;
+}
+.programaActual{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5rem;
+    padding: 0 7.5rem;
+}
+.contendorPrograma{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 1.875rem 0;
+}
+.programaActual h2{
+    font-size: 2rem;
+}
+.programaActual h3{
+    font-size: 4rem;
+    margin-bottom: 1.25rem  ;
+}
+.contenedorSeccion-artistaMusica{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px;
+    justify-items: center;
+
+}
+.contenedorSeccion-artistaMusica img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: -1;
+}
+.artistaMusica{
+    background-color: rgb(0, 0, 0,0.6);
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,650px) 1fr;
+    grid-template-areas:
+    ". video texto."
+    ;
+    align-content: center;
+    grid-template-rows:minmax(180px,500px) ;
+    column-gap: 1.5rem;
+}
+.artistaMusica div:nth-child(1){
+    grid-area: video;
+    width:100%;
+    height:100%;
+
+
+}
+.artistaMusica :nth-child(2){
+    grid-area: texto;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+    line-height: 25px;
+}
+.artistaMusica :nth-child(2) h3{
+    line-height: 40px;
+}
+.contenedorSeccion-topCanciones{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1300px 1fr;
+    grid-template-areas: ". canciones .";
+    column-gap: 1.5rem;
+    justify-items: center;
+}
+.topCanciones{
+    grid-area: canciones;
+    width: 100%;
+    padding: 3.75rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    row-gap: 1.875rem;
+    
+}
+.topCanciones h2{
+    grid-column: 1/-1;
+    text-align: center;
+}
+.tituloBanda{
+    display: flex;
+    width: 100%;
+    height: 11.25rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.tituloBanda h2{
+    text-align: center;
+}
+.contenedorSeccion-bandaMes{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px;
+    justify-items: center;
+
+}
+.contenedorSeccion-bandaMes img:first-child{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: -1;
+}
+.infoBanda{
+    background-color: rgb(0, 0, 0,0.6);
+    width: 100%;
+    height: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,650px) 1fr;
+    grid-template-rows: auto 20.0625rem;
+    grid-template-areas:
+    " . p p ."
+    " . img1 img2 ."
+    ;
+    row-gap: 3.125rem;
+    align-content: center;
+}
+.infoBanda p{
+    grid-area: p;
+    text-align: center;
+    
+}
+.contenedorSeccion-bandaMes img:nth-child(2) {
+    justify-self: center;
+    height: 100%;
+    grid-area: img1;
+}
+.contenedorSeccion-bandaMes img:nth-child(3) {
+    justify-self: center;
+    height: 100%;
+    grid-area: img2;
+}
+.seccionPlaylist{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0;
+}
+.seccionNoticias{
+    margin-top: 9.375rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(15.625rem,81.25rem) 1fr;
+    grid-template-rows: auto;
+    row-gap: 1.875rem;
+}
+.seccionNoticias article{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.noticia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.noticia a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.noticia a h4{
+    text-align: center;
+    color: white;
+    background-color: #474747;
+    padding: 1.25rem .625rem;
+}
+footer{
+    width: 100%;
+    background-color: #333333;
+    display: grid;
+    grid-template-areas: 
+    ".footer."
+    ;
+    grid-template-columns: 1fr 1300px 1fr;
+}
+.contenedorFooter{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "logo contacto redes";
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+.footerLogo{
+    grid-area: logo;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footerContacto{
+    grid-area: contacto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    gap: 20px;
+}
+.footerRedes{
+    grid-area: redes;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px;
+}
+.footerRedes h3{
+    grid-column: 1/-1;
+}
+.iconTexto{
+    text-decoration: none;
+    display: flex;
+    gap: .5rem;
+}
+.iconTexto img{
+    height: 2rem;
+}
+.iconTexto p{
+    font-size: 1.5rem;
+}
+.targetOn{
+    border-bottom: .1875rem solid #FFC700;
+}
+.targetOff{
+    border-bottom: .1875rem solid #323232;
+}
+.target{
+    max-width: 25rem;
+    min-height: 14.8125rem;
+    border-radius: 1.25rem;
+    background-color: #323232;
+    padding: 1.25rem .9375rem;
+    display: flex;
+    flex-direction: column;
+}
+.color80{
+    color: rgb(255, 255, 255 , .8);
+    font-weight: 300;
+}
+.color_estado_red{
+    background-color: rgba(246, 91, 119, 0.2);
+    color: #F65B77;
+    border-radius: .625rem;
+    padding: .1875rem .625rem;
+}
+.color_estado_grey{
+    background-color: rgb(201, 201, 201 ,.2);
+    color: #BFBFBF;
+    border-radius: .625rem;
+    padding: .1875rem .625rem;
+}
+.color_estado_yellow{
+    background-color: rgb(255, 199, 0, .2);
+    color: #FFC700;
+    border-radius: .625rem;
+    padding: .1875rem .625rem;
+}
+.target{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 25rem;
+}
+.target .top,.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.target .top div{
+    font-size: 1.125rem;
+    display: flex;
+    gap:.625rem;
+}
+.target .top div img{
+    height: 1.25rem;
+}   
+.target h5{
+    font-size: 2rem;
+    color: white;
+    align-self: center;
+}
+.target-hora{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.target-hora h5{
+    font-size: 1rem;
+}
+.target-hora p{
+    font-size: 1.5rem;
+}
+.fondoContenedor{
+    background-color: #131111;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.programaActual{
+    width: 90rem;
+    margin: 0 20px;
+    display: grid;
+    grid-template-areas: 
+    "title title title title title"
+    "img  conductores dias hora ."
+    "descripcion descripcion descripcion descripcion descripcion "
+    ;
+    grid-template-columns: 15.625rem repeat(4,auto) ;
+    padding: 4.5rem 0;
+    row-gap: 2.9375rem;
+    column-gap: 2.875rem;
+}
+.NombrePresentadores,.DiasPrograma,.HoraPrograma{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .875rem;
+    background-color: #333333;
+    padding: .625rem 1.25rem;
+    border-radius: 1rem;
+}
+.programaActual div:nth-child(1){
+    grid-area: title;
+}
+.programaActual div:nth-child(2){
+    grid-area: img;
+    max-width: 15.625rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3.125rem;
+}   
+.programaActual div:nth-child(3){
+    grid-area: conductores;
+}
+.programaActual div:nth-child(4){
+    grid-area: dias;
+}
+.programaActual div:nth-child(5){
+    grid-area: hora;
+}
+.programaActual div:nth-child(6){
+    grid-area: descripcion;
+    display: grid;
+    row-gap: 20px;
+}
+
+.presentadoresPrograma img{
+    object-fit: cover;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;  
+}
+.TSection{
+    align-self:flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1.1875rem;
+}
+.TSection p{
+    color: white;
+    font-size: 1.875rem;
+}
+.TSection :first-child{
+    width: .5rem;
+    height: 2.5rem;
+    background-color: #FFC700;
+    border-radius: .625rem;
+}
+
+.programacionDiaria{
+    width: 90rem;
+    margin: 0 20px;
+    padding: 4.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 2.5rem;
+    justify-items: center;
+}
+.programacionDiaria .TSection{
+    justify-self: flex-start;
+    grid-column: span 3;
+}
+
+/*Tablet*/
+@media(max-width:81.25rem){
+    .t30-28-16px{
+        font-size: 1.75rem;
+    }
+    /* Inicio Sección Noticias*/
+    .contenedorContacto{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "tituloContacto" 
+        "formulario";
+    }
+    /* Fin Sección Noticias*/
+    /*Footer*/
+    footer{
+        grid-template-areas: 
+        "footer"
+        ;
+        grid-template-columns: 1fr;
+    }
+    .iconTexto p{
+        font-size: 1rem;
+    }
+    .iconTexto img{
+        height: 1.5rem;
+    }
+    /*Footer*/
+
+
+    /*Incio de Seccion ContenedorInicio*/
+    .contenedorInicio{
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:
+        "presentacion presentacion"
+        "playlist playlist"
+        ;
+    }
+    .contenedorInicio .video{
+        width: 100%;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .contenedorInicio .video video{
+        width: auto;
+        height: 100%;
+    }
+    /*Fin de Seccion ContenedorInicio*/
+    /*Incio de Seccion Noticias*/
+    .seccionNoticias{
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(1fr,81.25rem);
+        grid-template-rows: auto;
+        row-gap: 1.875rem;
+    }
+    .seccionNoticias article{
+        grid-column: 1/-1;
+    }
+    /*Fin de Seccion Noticias*/
+    /*Incio de Seccion ArtistaMusica*/
+    .artistaMusica{
+        padding: 0  2rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:
+        "video texto"
+        ;
+    }
+    /*Fin de Seccion ArtistaMusica*/
+    /*Incio de Seccion BandaMes*/
+    .infoBanda{
+        padding: 0  2rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:
+        " p p "
+        " img1 img2"
+    ;
+    }
+    /*Fin de Seccion BandaMes*/
+    /*Inicio de Seccion Top Canciones*/
+    .contenedorSeccion-topCanciones{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "canciones canciones";
+    }
+    .topCanciones{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    /*Fin de Seccion Top Canciones*/
+    /*Inicio Diseño section ProgramacionDiaria*/
+    .programacionDiaria{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .programacionDiaria .TSection{
+        grid-column: span 2;
+    }
+    /*Fin Diseño section ProgramacionDiaria*/
+    /*Inicio de Seccion ProgramaActual*/
+    .programaActual{
+        width: 100%;
+        grid-template-columns: 15.625rem repeat(3,auto) ;
+        grid-template-areas: 
+        "title title title title"
+        "img  conductores conductores ."
+        "dias hora . ."
+        "descripcion descripcion descripcion descripcion"
+        ;
+    }
+    /*Fin de Seccion ProgramaActual*/
+}
+@media(max-width: 56.25rem){
+    .presentacion:hover .line-md--chevron-down{
+        height: 3rem;
+        width: 3rem;
+        background-color: white;
+    }
+    .presentacion:hover .tocame{
+        font-size: 24px;
+    }
+    .t72-40-24px{
+        font-size: 40px;
+    }
+    .t32-24-16px{
+        font-size: 24px;
+    }
+    .t40-24-18px{
+        font-size: 24px;
+    }
+    .t32-28-16px{
+        font-size: 28px;
+    }
+    /*Inicio de Seccion Noticias*/
+    .noticia a{
+        width: 80%;
+    }
+    /*Fin de Seccion Noticias*/
+
+    /*Inicio de Seccion AristaMusica*/
+    .artistaMusica{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "video"
+        "texto"
+        ;
+        grid-template-rows: minmax(auto,400px) auto;
+        align-content: center;
+        padding: 9.375rem 2rem ;
+        row-gap: 1.5rem;
+    }
+    .contenedorSeccion-artistaMusica{
+        grid-template-rows:  auto;
+    }
+    .artistaMusica :nth-child(2){
+        text-align: center;
+    }
+    /*Fin de Seccion AristaMusica*/
+    /*Incio de Seccion BandaMes*/
+    .contenedorSeccion-bandaMes{
+        grid-template-rows: auto;
+    }
+    .infoBanda{
+        padding: 2rem;
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "p"
+        "img1"
+        "img2"
+    ;
+    }
+
+    /*Fin de Seccion BandaMes*/
+
+    /*Inicion -- Diseño de TargetHorario*/
+    .target{
+        max-width: 21.875rem;
+        min-height: 14.375rem;
+    }
+    .target h5{
+        font-size: 1.75rem;
+    }
+    .target-hora h5{
+        font-size: .875rem;
+    }
+    /*Fin -- Diseño de TargetHorario*/
+
+}
+
+/*Phone*/
+@media(max-width:47.5rem){
+    .t32-28-16px{
+        font-size: 28px;
+    }
+    /* Inicio Sección Noticias*/
+    .contenedorContacto{
+        grid-template-rows: 400px auto;
+    }
+    /* Fin Sección Noticias*/
+    /*Footer*/
+    .contenedorFooter{
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(100px,auto);
+        grid-template-areas: "logo""contacto" "redes";
+        gap: 1.8rem;
+    }
+    /*Footer*/
+    /*Inicio de Seccion ContenedorInicio*/
+    .contenedorInicio{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "presentacion"
+        "playlist"
+    ;
+    }
+    .contenedorInicio .video{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .contenedorInicio .video video{
+        width: auto;
+        height: 100%;
+    }
+    /*Fin de Seccion ContenedorInicio*/
+
+
+
+    /*Inicio de Seccion AristaMusica*/
+    .artistaMusica{
+        grid-template-rows: minmax(auto,300px) auto;
+    }
+    /*Fin de Seccion AristaMusica*/
+    /*Inicio de Seccion Top Canciones*/
+    .topCanciones iframe{
+        width:80%;
+    }
+    /*Fin de Seccion Top Canciones*/
+    /*Inicio Diseño section ProgramacionDiaria*/
+    .programacionDiaria{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .programacionDiaria .TSection{
+        grid-column: span 1;
+    }
+    /*Fin Diseño section ProgramacionDiaria*/
+
+    /*Inicio de Seccion ProgramaActual*/
+    .programaActual{
+        width: 100%;
+        grid-template-areas: 
+        "title"
+        "img"
+        "conductores"
+        "dias" 
+        "hora"
+        "descripcion"
+        ;
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+    .programaActual div:nth-child(2){
+        justify-self: center;
+    }
+    .t24-18px{
+        font-size: 1.125rem;
+    }
+    .t20-16px{
+        font-size: 1rem;
+    }
+    /*Fin de Seccion ProgramaActual*/
+}
+@media(max-width:600px){
+    .infoBanda{
+        padding:2rem 0;
+        
+    }
+    .infoBanda p{
+        padding:1rem;
+        
+    }
+    .t30-28-16px{
+        font-size: 16px;
+    }
+    /*Inicio de Seccion ContenedorInicio*/
+    .presentacion div p img{
+        width: 200px;
+    }
+    .spotify{
+        padding: 4.5rem 16px;
+    }
+    /*Fin de Seccion ContenedorInicio*/
+    /*Inicio de Seccion Top Canciones*/
+    .topCanciones iframe{
+        width:70%;
+    }
+    .topCanciones{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 1.875rem;
+        
+    }
+    /*Fin de Seccion Top Canciones*/
+    }
+@media(max-width:26.875rem){
+    .t32-28-16px{
+        font-size: 16px;
+    }
+    .t32-18px{
+        font-size: 1.25rem;
+    }
+    .t28-18px{
+        font-size: 1.25rem;
+    }
+    .t32-24-16px{
+        font-size: 1rem;
+    }
+    .t40-24-18px{
+        font-size: 1rem;
+    }
+    /*Inicio de Seccion ContenedorInicio*/
+    .contenedorInicio{
+        grid-template-rows: minmax(auto,600px) auto auto;
+    }
+    /*Fin de Seccion ContenedorInicio*/
+    /*Inicio de Seccion TituloBanda*/
+    .tituloBanda{
+        height: 100px;
+    }
+    /*Fin de Seccion TituloBanda*/
+    /*Inicio de Seccion AristaMusica*/
+    .artistaMusica{
+        padding: 0 2rem;
+        padding-top: 9.375rem;
+        padding-bottom: 3.125rem;
+        row-gap: 1.5rem;
+    }
+    /*Fin de Seccion AristaMusica*/
+    /*Inicio de Seccion Top Canciones*/
+    .topCanciones iframe{
+        width:70%;
+    }
+    /*Fin de Seccion Top Canciones*/
+    /*Inicion -- Diseño de TargetHorario*/
+    .target{
+        max-width: 18.75rem;
+        min-height: 11.4375rem;
+        gap: 1.5625rem;
+    }
+    .target .top div{
+        font-size: .875rem;
+    }
+    .target .top div img{
+        height: .875rem;
+    }
+    .target h5,.target-hora p{
+        font-size: 1.25rem;
+    }
+    .target-hora h5{
+        font-size: .75rem;
+    }
+    /*Fin -- Diseño de TargetHorario*/
+}
