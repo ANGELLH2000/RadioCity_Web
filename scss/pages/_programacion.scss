@@ -1,0 +1,96 @@
+.programacionDiaria,.programaActual{
+    grid-area: contenedor;
+    border: 2px solid $blanco;
+    margin: 200px 2.5rem;
+}
+.programaActual{
+    display: grid;
+    grid-template-areas: 
+    "TSection TSection TSection TSection TSection"
+    "presentadores nombre_presentadores dias horas ."
+    "descripcion descripcion descripcion descripcion descripcion "
+    ;
+    grid-template-columns: 15.625rem repeat(3,auto) 1fr ;
+    padding: 4.5rem 0;
+    row-gap: 2.9375rem;
+    column-gap: 2.875rem;
+}
+.TSection{
+    grid-area: TSection;
+    margin: 0;
+    @include flex-horizontal;
+    gap:1.1875rem;
+    height: 2.5rem;//40px
+    .barra{
+        width: .5rem;
+        height: 2.5rem;
+        background-color:$amarillo;
+        border-radius: .625rem;
+    }
+    div{
+        width: 100%;
+        p{
+            font-weight: map-get($map:$fonts-weight , $key:3 );
+            font-style: map-get($map: $fonts-style, $key:1 );
+            color: $blanco;
+            font-size: 1.875rem;//30px
+            margin: 0;        
+        }   
+    }      
+}
+.presentadoresPrograma{
+    grid-area: presentadores;
+    max-width: 15.625rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3.125rem;
+    img{
+        object-fit: cover;
+        width: 6.25rem;
+        height: 6.25rem;
+        border-radius: 50%;
+    }
+}
+.NombrePresentadores,.DiasPrograma,.HoraPrograma{
+    @extend %card_basic;
+}
+.NombrePresentadores{
+    grid-area: nombre_presentadores;
+}
+.DiasPrograma{
+    grid-area: dias;
+}
+.HoraPrograma{
+    grid-area: horas;
+}
+.DescripcionPrograma{
+    grid-area: descripcion;
+    @include flex-vertical-gap(1.25rem);
+    p{
+        margin: 0;
+        color: $blanco;
+        font-style: map-get($map: $fonts-style, $key:1 );
+    }
+    p:nth-child(1){
+        color: $blanco2;
+        font-size: 1.25rem;//20px
+        font-weight: map-get($map:$fonts-weight , $key:1 );
+    }
+    p:nth-child(2){
+        font-size: 1.5rem;//24px
+        font-weight: map-get($map:$fonts-weight , $key:2 );
+    }
+}
+.programacionDiaria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 2.5rem;
+    .TSection{
+        justify-self: flex-start;
+        grid-column:span 3;
+        grid-row: span 1;
+    }
+    .target{
+        grid-column: span 1;
+    }
+}

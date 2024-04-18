@@ -3,6 +3,205 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   color: white; }
+
+img {
+  height: 100px; }
+
+body {
+  background: #1A1E1D; }
+
+p {
+  font-weight: 600;
+  font-style: italic; }
+
+.NombrePresentadores, .DiasPrograma, .HoraPrograma {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: .875rem;
+  background-color: #323232;
+  padding: .625rem 1.25rem;
+  border-radius: 1rem; }
+  .NombrePresentadores p, .DiasPrograma p, .HoraPrograma p, .NombrePresentadores span, .DiasPrograma span, .HoraPrograma span {
+    margin: 0;
+    color: #FFFFFF;
+    background: #323232;
+    font-style: normal; }
+  .NombrePresentadores p:nth-child(1), .DiasPrograma p:nth-child(1), .HoraPrograma p:nth-child(1) {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+    font-weight: 300; }
+  .NombrePresentadores p:nth-child(2), .DiasPrograma p:nth-child(2), .HoraPrograma p:nth-child(2), .NombrePresentadores span, .DiasPrograma span, .HoraPrograma span {
+    font-size: 1.5rem; }
+
+.targetOn {
+  border-bottom: 0.1875rem solid #FFC700; }
+
+.targetOff {
+  border-bottom: 0.1875rem solid #323232; }
+
+.target {
+  margin: 0;
+  max-width: 25rem;
+  min-height: 14.8125rem;
+  border-radius: 1.25rem;
+  background: #323232;
+  padding: 1.25rem .9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; }
+  .target .top, .target .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .target .top div {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; }
+    .target .top div img {
+      height: 1.25rem; }
+    .target .top div p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.125rem;
+      font-weight: 600;
+      font-style: normal; }
+  .target .top p {
+    margin: 0;
+    font-weight: 600;
+    font-style: normal; }
+  .target h5 {
+    margin: 0;
+    background: #323232;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    align-self: center; }
+
+.color_estado_red {
+  font-size: 1rem;
+  border-radius: .625rem;
+  padding: .1875rem .625rem;
+  background: rgba(247, 91, 120, 0.2);
+  color: #F65B77; }
+
+.color_estado_grey {
+  font-size: 1rem;
+  border-radius: .625rem;
+  padding: .1875rem .625rem;
+  background: rgba(201, 201, 201, 0.2);
+  color: #BFBFBF; }
+
+.color_estado_yellow {
+  font-size: 1rem;
+  border-radius: .625rem;
+  padding: .1875rem .625rem;
+  background: rgba(255, 200, 0, 0.2);
+  color: #FFC700; }
+
+.target-hora {
+  display: flex;
+  flex-direction: column;
+  justify-content: left; }
+  .target-hora h5 {
+    font-size: 1rem; }
+  .target-hora p {
+    font-size: 1.5rem; }
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1400px 1fr;
+  grid-template-areas: ". contenedor ."; }
+  @media (max-width: 81.25rem) {
+    .contenedor {
+      grid-template-columns: 1fr;
+      grid-template-areas: "contenedor"; } }
+
+.programacionDiaria, .programaActual {
+  grid-area: contenedor;
+  border: 2px solid #FFFFFF;
+  margin: 200px 2.5rem; }
+
+.programaActual {
+  display: grid;
+  grid-template-areas: "TSection TSection TSection TSection TSection" "presentadores nombre_presentadores dias horas ." "descripcion descripcion descripcion descripcion descripcion ";
+  grid-template-columns: 15.625rem repeat(3, auto) 1fr;
+  padding: 4.5rem 0;
+  row-gap: 2.9375rem;
+  column-gap: 2.875rem; }
+
+.TSection {
+  grid-area: TSection;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.1875rem;
+  height: 2.5rem; }
+  .TSection .barra {
+    width: .5rem;
+    height: 2.5rem;
+    background-color: #FFC700;
+    border-radius: .625rem; }
+  .TSection div {
+    width: 100%; }
+    .TSection div p {
+      font-weight: 600;
+      font-style: normal;
+      color: #FFFFFF;
+      font-size: 1.875rem;
+      margin: 0; }
+
+.presentadoresPrograma {
+  grid-area: presentadores;
+  max-width: 15.625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3.125rem; }
+  .presentadoresPrograma img {
+    object-fit: cover;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%; }
+
+.NombrePresentadores {
+  grid-area: nombre_presentadores; }
+
+.DiasPrograma {
+  grid-area: dias; }
+
+.HoraPrograma {
+  grid-area: horas; }
+
+.DescripcionPrograma {
+  grid-area: descripcion;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; }
+  .DescripcionPrograma p {
+    margin: 0;
+    color: #FFFFFF;
+    font-style: normal; }
+  .DescripcionPrograma p:nth-child(1) {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+    font-weight: 300; }
+  .DescripcionPrograma p:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: 400; }
+
+.programacionDiaria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2.5rem; }
+  .programacionDiaria .TSection {
+    justify-self: flex-start;
+    grid-column: span 3;
+    grid-row: span 1; }
+  .programacionDiaria .target {
+    grid-column: span 1; }

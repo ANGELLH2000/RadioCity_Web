@@ -1,0 +1,19 @@
+@mixin contenedor-desktop{
+    display: grid;
+    grid-template-columns: 1fr 1400px 1fr;
+    grid-template-areas: ". contenedor .";
+    @media(max-width:81.25rem){
+        grid-template-columns: 1fr;
+        grid-template-areas: "contenedor";
+    }
+}
+@mixin flex-horizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@mixin flex-vertical-gap($gap){
+    display: flex;
+    flex-direction: column;
+    gap:$gap;
+}

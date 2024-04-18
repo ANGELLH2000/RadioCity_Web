@@ -1,0 +1,85 @@
+.targetOn{
+    border-bottom: .1875rem solid $amarillo;
+}
+.targetOff{
+    border-bottom: .1875rem solid $gris;
+}
+.target{
+    margin: 0;
+    max-width: 25rem;//400px
+    min-height: 14.8125rem;
+    border-radius: 1.25rem;
+    background: $gris;
+    padding: 1.25rem .9375rem;
+    @include flex-vertical-gap(2.5rem);
+    .top,.bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .top{
+        div{
+            margin: 0;
+            @include flex-horizontal;
+            gap: 10px;
+            img{
+                height: 1.25rem;
+            }
+            p{
+                margin: 0;
+                color: $blanco2;
+                font-size: 1.125rem;//18px
+                font-weight: map-get($map:$fonts-weight , $key:3 );
+                font-style: map-get($map: $fonts-style, $key:1 );
+            }
+        }
+        p{
+            margin: 0;
+            font-weight: map-get($map:$fonts-weight , $key:3 );
+            font-style: map-get($map: $fonts-style, $key:1 );         
+        }
+    }
+    
+    h5{
+        margin: 0;
+        background: $gris;
+        font-size: 2rem;//32px
+        font-weight: map-get($map:$fonts-weight , $key:2 );
+        font-style: map-get($map: $fonts-style, $key:1 );
+        color: $blanco;
+        align-self: center;
+    }
+}
+@mixin p_base{
+    font-size: 1rem;//16px
+    border-radius: .625rem;
+    padding: .1875rem .625rem;
+}
+.color_estado_red{
+    @include p_base;
+    background:$rojo-fondo;
+    color: $rojo;
+}
+.color_estado_grey{
+    @include p_base;
+    background:$gris2-fondo;
+    color: $gris2;
+}
+.color_estado_yellow{
+    @include p_base;
+    background:$amarillo-fondo;
+    color: $amarillo;
+}
+
+.target-hora{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    h5{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}

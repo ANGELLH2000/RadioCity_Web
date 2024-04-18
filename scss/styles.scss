@@ -1,9 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    font-weight:400;  
-    font-style: normal;
-    color: white;
-}
+@import "base/colors";
+@import "base/reset";
+@import "base/typography";
+
+@import "utils/mixmin-grid";
+
+@import "components/card_basic";
+@import "components/card_programacion";
+@import "layout/grid";
+@import "pages/programacion";
