@@ -8,6 +8,7 @@ $fonts-style:(
     1:normal,
     2:italic
 );
+
 p{
     font-weight: map-get($map:$fonts-weight , $key:3 );
     font-style: map-get($map: $fonts-style, $key:2 );

@@ -35,6 +35,48 @@ p {
   .NombrePresentadores p:nth-child(2), .DiasPrograma p:nth-child(2), .HoraPrograma p:nth-child(2), .NombrePresentadores span, .DiasPrograma span, .HoraPrograma span {
     font-size: 1.5rem; }
 
+.target .bottom .target-hora {
+  display: flex;
+  flex-direction: column;
+  justify-content: left; }
+  .target .bottom .target-hora h5, .target .bottom .target-hora p {
+    margin: 0;
+    font-style: normal; }
+  .target .bottom .target-hora h5 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 300; }
+  .target .bottom .target-hora p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    font-weight: 600; }
+
+.section_noticias article {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .section_noticias article a {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    text-decoration: none; }
+    .section_noticias article a img {
+      width: 100%;
+      height: auto; }
+    .section_noticias article a h4 {
+      margin: 0;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+      color: #FFFFFF;
+      background: #474747;
+      padding: 2rem 1.5rem; }
+
 .targetOn {
   border-bottom: 0.1875rem solid #FFC700; }
 
@@ -66,52 +108,106 @@ p {
       height: 1.25rem; }
     .target .top div p {
       margin: 0;
-      color: rgba(255, 255, 255, 0.8);
       font-size: 1.125rem;
       font-weight: 600;
       font-style: normal; }
+      .target .top div p else {
+        color: rgba(255, 255, 255, 0.8); }
   .target .top p {
     margin: 0;
+    font-size: 1rem;
     font-weight: 600;
     font-style: normal; }
+    .target .top p else {
+      color: ""; }
   .target h5 {
     margin: 0;
-    background: #323232;
     font-size: 2rem;
     font-weight: 400;
     font-style: normal;
-    color: #FFFFFF;
     align-self: center; }
+    .target h5 else {
+      color: #FFFFFF; }
 
 .color_estado_red {
-  font-size: 1rem;
   border-radius: .625rem;
   padding: .1875rem .625rem;
   background: rgba(247, 91, 120, 0.2);
   color: #F65B77; }
 
 .color_estado_grey {
-  font-size: 1rem;
   border-radius: .625rem;
   padding: .1875rem .625rem;
   background: rgba(201, 201, 201, 0.2);
   color: #BFBFBF; }
 
 .color_estado_yellow {
-  font-size: 1rem;
   border-radius: .625rem;
   padding: .1875rem .625rem;
   background: rgba(255, 200, 0, 0.2);
   color: #FFC700; }
 
-.target-hora {
-  display: flex;
-  flex-direction: column;
-  justify-content: left; }
-  .target-hora h5 {
-    font-size: 1rem; }
-  .target-hora p {
-    font-size: 1.5rem; }
+.contenedorFooter {
+  border: 2px solid #FFFFFF;
+  margin: 0;
+  grid-area: contenedor;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "logo contacto redes";
+  align-items: center; }
+  .contenedorFooter .footerLogo {
+    grid-area: logo; }
+    .contenedorFooter .footerLogo a {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .contenedorFooter .footerLogo a img {
+        width: 60%; }
+  .contenedorFooter .footerContacto {
+    grid-area: contacto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; }
+    .contenedorFooter .footerContacto h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: normal; }
+      .contenedorFooter .footerContacto h3 else {
+        color: #FFFFFF; }
+  .contenedorFooter .footerRedes {
+    grid-area: redes;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 20px; }
+    .contenedorFooter .footerRedes h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: normal;
+      grid-column: 1/-1; }
+      .contenedorFooter .footerRedes h3 else {
+        color: #FFFFFF; }
+  .contenedorFooter .iconTexto {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem; }
+    .contenedorFooter .iconTexto img {
+      height: 2rem; }
+    .contenedorFooter .iconTexto p {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: normal; }
+      .contenedorFooter .iconTexto p else {
+        color: #FFFFFF; }
 
 .contenedor {
   display: grid;
@@ -205,3 +301,11 @@ p {
     grid-row: span 1; }
   .programacionDiaria .target {
     grid-column: span 1; }
+
+.section_noticias {
+  grid-area: contenedor;
+  border: 2px solid #FFFFFF;
+  margin: 200px 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 100px; }

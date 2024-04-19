@@ -1,0 +1,12 @@
+.section_noticias{
+    grid-area: contenedor;
+    border: 2px solid $blanco;
+    margin: 200px 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+
+    article{
+        @extend %noticia;
+    }
+}

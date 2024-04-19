@@ -21,3 +21,51 @@
         font-size: 1.5rem;//24px
     }
 }
+%card_basic2{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    h5,p{
+        margin: 0;
+        font-style: map-get($map: $fonts-style, $key:1 );
+    }
+    h5{
+        color: $blanco2;
+        font-size: 1rem;
+        font-weight: map-get($map:$fonts-weight , $key:1 );  
+    }
+    p{
+        color: $blanco2;
+        font-size: 1.5rem;
+        font-weight: map-get($map:$fonts-weight , $key:3 ); 
+    }
+}
+%noticia{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a{  
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 90%;
+        text-decoration: none;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        h4{
+            margin: 0;
+            font-size: 40px;
+            font-style: map-get($map: $fonts-style, $key:1 );
+            font-weight: map-get($map:$fonts-weight , $key:2 ); 
+            text-align: center;
+            color:$blanco;
+            background:$gris3;
+            padding: 2rem 1.5rem;
+        }
+    }
+}

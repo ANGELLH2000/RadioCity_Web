@@ -1,0 +1,11 @@
+@mixin style_texto( $color:$gris,$font-size:2rem,$weight:2,$style:2){
+    @if $color==" "{
+
+    }else{
+        color:$color;
+    }
+    margin: 0;
+    font-size:$font-size;//32px
+    font-weight: map-get($map:$fonts-weight , $key:$weight);
+    font-style: map-get($map: $fonts-style, $key:$style);
+}
