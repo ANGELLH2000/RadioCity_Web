@@ -1,0 +1,98 @@
+.fondoContacto{
+    width: 100%;
+    height: 37.5rem;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: -3;
+    opacity: .2;
+    background-image: url("https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    overflow:hidden;
+}
+.contenedorContacto{
+    border: 2px solid $blanco;
+    grid-area: contenedor;
+    margin:0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 37.5rem auto;
+    .tituloContacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            @include style_texto($blanco2,4.375rem,3,1);
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        p{
+            max-width: 900px;
+            @include style_texto($blanco2,2rem,2,1);
+            text-align: center;
+        }
+    }
+    .formulario{
+        width: 100%;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        form{
+            width: 100%;
+            @include flex-vertical-gap(10px);
+            align-items: center;
+            .form-group {
+                position: relative;
+                margin: 12px 0;
+            }
+            
+            .form-group input,.form-group textarea {
+                padding: 8px 10px;
+                border-radius: 5px;
+                border: #acacac solid 2px;
+                background-color: transparent;
+                transition: 0.15s all ease;
+                @include style_texto(#eee,1.125rem,1,1);
+            }
+            
+            .form-group input:focus ,.form-group textarea:focus{
+                border-color: #eee;
+            }
+            
+            .form-group input::placeholder ,.form-group textarea::placeholder{
+                color: transparent;
+            }
+            
+            .form-group .form-label {
+                position: absolute;
+                top: 9px;
+                left: 0;
+                font-size: 18px;
+                padding: 0 10px;
+                color: #acacac;
+                pointer-events: none;
+                transition: 0.15s all ease;
+            }
+            
+            .form-group input:focus + .form-label,
+            .form-group input:not(:placeholder-shown) + .form-label,
+            .form-group textarea:focus + .form-label,
+            .form-group textarea:not(:placeholder-shown) + .form-label{
+                transform: translate(5px, -22px);
+                background-color: #383838;
+                @include style_texto(#eee,.875rem,1,1);
+            }
+            
+        }
+        .enviar{
+            max-width: 200px;
+            background:$amarillo;
+            border-radius: 10px;
+            padding: .5rem;   
+            @include style_texto($footer,1.5rem,3,1);
+        }
+    }
+}

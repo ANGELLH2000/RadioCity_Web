@@ -107,27 +107,23 @@ p {
     .target .top div img {
       height: 1.25rem; }
     .target .top div p {
+      color: rgba(255, 255, 255, 0.8);
       margin: 0;
       font-size: 1.125rem;
       font-weight: 600;
       font-style: normal; }
-      .target .top div p else {
-        color: rgba(255, 255, 255, 0.8); }
   .target .top p {
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
     font-style: normal; }
-    .target .top p else {
-      color: ""; }
   .target h5 {
+    color: #FFFFFF;
     margin: 0;
     font-size: 2rem;
     font-weight: 400;
     font-style: normal;
     align-self: center; }
-    .target h5 else {
-      color: #FFFFFF; }
 
 .color_estado_red {
   border-radius: .625rem;
@@ -150,6 +146,7 @@ p {
 .contenedorFooter {
   border: 2px solid #FFFFFF;
   margin: 0;
+  background: #333333;
   grid-area: contenedor;
   padding-top: 40px;
   padding-bottom: 20px;
@@ -173,12 +170,11 @@ p {
     align-items: center;
     gap: 20px; }
     .contenedorFooter .footerContacto h3 {
+      color: #FFFFFF;
       margin: 0;
       font-size: 1.5rem;
       font-weight: 600;
       font-style: normal; }
-      .contenedorFooter .footerContacto h3 else {
-        color: #FFFFFF; }
   .contenedorFooter .footerRedes {
     grid-area: redes;
     width: 100%;
@@ -187,13 +183,12 @@ p {
     justify-items: center;
     row-gap: 20px; }
     .contenedorFooter .footerRedes h3 {
+      color: #FFFFFF;
       margin: 0;
       font-size: 1.5rem;
       font-weight: 600;
       font-style: normal;
       grid-column: 1/-1; }
-      .contenedorFooter .footerRedes h3 else {
-        color: #FFFFFF; }
   .contenedorFooter .iconTexto {
     text-decoration: none;
     display: flex;
@@ -202,12 +197,11 @@ p {
     .contenedorFooter .iconTexto img {
       height: 2rem; }
     .contenedorFooter .iconTexto p {
+      color: #FFFFFF;
       margin: 0;
       font-size: 1.5rem;
       font-weight: 400;
       font-style: normal; }
-      .contenedorFooter .iconTexto p else {
-        color: #FFFFFF; }
 
 .contenedor {
   display: grid;
@@ -215,6 +209,26 @@ p {
   grid-template-areas: ". contenedor ."; }
   @media (max-width: 81.25rem) {
     .contenedor {
+      grid-template-columns: 1fr;
+      grid-template-areas: "contenedor"; } }
+
+.FooterGeneral {
+  display: grid;
+  grid-template-columns: 1fr 1400px 1fr;
+  grid-template-areas: ". contenedor .";
+  background: #333333; }
+  @media (max-width: 81.25rem) {
+    .FooterGeneral {
+      grid-template-columns: 1fr;
+      grid-template-areas: "contenedor"; } }
+
+.contenedor-topCanciones, .contenedor-bandaMes {
+  display: grid;
+  grid-template-columns: 1fr 1400px 1fr;
+  grid-template-areas: ". contenedor .";
+  background: rgba(255, 255, 255, 0.1); }
+  @media (max-width: 81.25rem) {
+    .contenedor-topCanciones, .contenedor-bandaMes {
       grid-template-columns: 1fr;
       grid-template-areas: "contenedor"; } }
 
@@ -309,3 +323,288 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 100px; }
+
+.fondoContacto {
+  width: 100%;
+  height: 37.5rem;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  z-index: -3;
+  opacity: .2;
+  background-image: url("https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  overflow: hidden; }
+
+.contenedorContacto {
+  border: 2px solid #FFFFFF;
+  grid-area: contenedor;
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 37.5rem auto; }
+  .contenedorContacto .tituloContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .contenedorContacto .tituloContacto h2 {
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+      font-size: 4.375rem;
+      font-weight: 600;
+      font-style: normal;
+      margin: 0;
+      margin-bottom: 20px; }
+    .contenedorContacto .tituloContacto p {
+      max-width: 900px;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center; }
+  .contenedorContacto .formulario {
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; }
+    .contenedorContacto .formulario form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center; }
+      .contenedorContacto .formulario form .form-group {
+        position: relative;
+        margin: 12px 0; }
+      .contenedorContacto .formulario form .form-group input, .contenedorContacto .formulario form .form-group textarea {
+        padding: 8px 10px;
+        border-radius: 5px;
+        border: #acacac solid 2px;
+        background-color: transparent;
+        transition: 0.15s all ease;
+        color: #eee;
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 300;
+        font-style: normal; }
+      .contenedorContacto .formulario form .form-group input:focus, .contenedorContacto .formulario form .form-group textarea:focus {
+        border-color: #eee; }
+      .contenedorContacto .formulario form .form-group input::placeholder, .contenedorContacto .formulario form .form-group textarea::placeholder {
+        color: transparent; }
+      .contenedorContacto .formulario form .form-group .form-label {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        font-size: 18px;
+        padding: 0 10px;
+        color: #acacac;
+        pointer-events: none;
+        transition: 0.15s all ease; }
+      .contenedorContacto .formulario form .form-group input:focus + .form-label,
+      .contenedorContacto .formulario form .form-group input:not(:placeholder-shown) + .form-label,
+      .contenedorContacto .formulario form .form-group textarea:focus + .form-label,
+      .contenedorContacto .formulario form .form-group textarea:not(:placeholder-shown) + .form-label {
+        transform: translate(5px, -22px);
+        background-color: #383838;
+        color: #eee;
+        margin: 0;
+        font-size: 0.875rem;
+        font-weight: 300;
+        font-style: normal; }
+    .contenedorContacto .formulario .enviar {
+      max-width: 200px;
+      background: #FFC700;
+      border-radius: 10px;
+      padding: .5rem;
+      color: #333333;
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-style: normal; }
+
+.musica_fondo {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  opacity: .3;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  z-index: -1; }
+
+.artistaMusica {
+  grid-area: contenedor;
+  border: 2px solid #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); }
+  .artistaMusica .frameVideo {
+    grid-column: 1/4;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .artistaMusica .frameVideo iframe {
+      width: 80%; }
+  .artistaMusica .descripcion {
+    grid-column: 4/6;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; }
+    .artistaMusica .descripcion h3 {
+      color: #FFFFFF;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+      font-style: normal;
+      text-align: center; }
+    .artistaMusica .descripcion p {
+      color: #FFFFFF;
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 40px; }
+
+.topCanciones {
+  grid-area: contenedor;
+  border: 2px solid #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 1.875rem; }
+  .topCanciones h2 {
+    grid-column: 1/-1;
+    padding: 2.5rem 0;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal; }
+
+.tituloBanda {
+  grid-area: contenedor;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .tituloBanda h2 {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase; }
+
+.bandaMes {
+  grid-area: contenedor;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 20.0625rem;
+  justify-items: center;
+  align-items: center;
+  padding: 0 3.75rem; }
+  .bandaMes p {
+    grid-column: 1/3;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 1.875rem;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center; }
+  .bandaMes img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: 90%;
+    background: rebeccapurple; }
+
+.banda_Playlist {
+  grid-area: contenedor;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 50px 0; }
+  .banda_Playlist iframe {
+    width: 55%; }
+
+.video {
+  width: 100%;
+  height: 43.75rem;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  z-index: -1;
+  opacity: .5;
+  overflow: hidden; }
+  .video video {
+    width: 100%; }
+
+.presentacion {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  border: 2px solid #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center; }
+  .presentacion p {
+    max-width: 60%;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; }
+    .presentacion p img {
+      height: 60px; }
+  .presentacion p:nth-child(3) {
+    padding-top: 3.125rem;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+    font-style: normal; }
+
+.playlist {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 3.75rem; }
+  .playlist div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 3.0625rem; }
+    .playlist div:nth-child(1) h2 {
+      color: #FFFFFF;
+      margin: 0;
+      font-size: 3.75rem;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center; }
+    .playlist div:nth-child(1) div {
+      width: 48%;
+      height: .5rem;
+      border-radius: 10px;
+      background-color: #FFC700; }
+    .playlist div:nth-child(1) .barra1 {
+      align-self: self-start; }
+    .playlist div:nth-child(1) .barra2 {
+      align-self: self-end; }
+  .playlist .spotify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.125rem; }
+    .playlist .spotify iframe {
+      width: 80%; }
