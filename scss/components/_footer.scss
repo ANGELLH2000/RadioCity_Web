@@ -9,6 +9,7 @@
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: "logo contacto redes";
     align-items: center;
+    @include footer_responsive;
     .footerLogo{
         grid-area: logo;
         

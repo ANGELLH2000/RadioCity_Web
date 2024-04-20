@@ -1,0 +1,47 @@
+@mixin programaActual_responsive{
+    @media(max-width:1300px){
+        display: grid;
+        grid-template-areas: 
+        "TSection TSection TSection TSection "
+        "presentadores nombre_presentadores nombre_presentadores ."
+        "dias horas . ."
+        "descripcion descripcion descripcion descripcion"
+        ;
+        grid-template-columns: 15.625rem repeat(2,auto) 1fr ;
+    }
+    @media(max-width:800px){
+        display: grid;
+        grid-template-areas: 
+        "TSection TSection TSection"
+        "presentadores nombre_presentadores nombre_presentadores "
+        "dias horas horas"
+        "descripcion descripcion descripcion"
+        ;
+        grid-template-columns: 15.625rem repeat(2,1fr);
+    }
+    @media(max-width:600px){
+        display: grid;
+        grid-template-areas: 
+        "TSection"
+        "presentadores"
+        "nombre_presentadores"
+        "dias" 
+        "horas"
+        "descripcion"
+        ;
+        grid-template-columns: 1fr;
+    }
+    
+}
+@mixin programacionDiaria_responsive{
+    @media(max-width:1300px){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2.5rem;
+    }
+    @media(max-width:800px){
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+}
