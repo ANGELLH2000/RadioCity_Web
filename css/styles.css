@@ -218,7 +218,6 @@ header {
   color: #FFC700; }
 
 .contenedorFooter {
-  border: 2px solid #FFFFFF;
   margin: 0;
   background: #333333;
   grid-area: contenedor;
@@ -529,7 +528,6 @@ header {
   overflow: hidden; }
 
 .contenedorContacto {
-  border: 2px solid #FFFFFF;
   grid-area: contenedor;
   margin: 0;
   width: 100%;
