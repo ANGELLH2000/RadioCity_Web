@@ -4,6 +4,6 @@
 .FooterGeneral{
     @include contenedor-desktop($footer);
 }
-.contenedor-topCanciones,.contenedor-bandaMes{
+.contenedor-topCanciones{
     @include contenedor-desktop($blanco3);
 }

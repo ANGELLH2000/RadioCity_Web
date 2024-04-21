@@ -15,38 +15,47 @@ p {
   font-weight: 600;
   font-style: italic; }
 
-header nav {
-  background: rgba(26, 30, 29, 0.8);
-  min-height: 5.625rem;
-  max-height: 7.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
-
-header .navbar-brand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 120px; }
-
-header .navbar-brand img {
-  padding-left: 30px;
-  height: 50%; }
-
-header .navbar-nav {
-  padding-right: 20px;
-  gap: 10px; }
-  header .navbar-nav .nav-item a.active {
+header {
+  z-index: 200; }
+  header nav {
+    background: rgba(26, 30, 29, 0.8);
+    min-height: 5.625rem;
+    max-height: 7.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+  header .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px; }
+  header .navbar-brand img {
+    padding-left: 30px;
+    height: 50%; }
+    @media (max-width: 1100px) {
+      header .navbar-brand img {
+        height: 40%; } }
+  header .navbar-nav {
+    padding-right: 20px;
+    gap: 10px; }
+    header .navbar-nav .nav-item a.active {
+      color: #FFFFFF;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 400;
+      font-style: normal; }
+      @media (max-width: 1100px) {
+        header .navbar-nav .nav-item a.active {
+          font-size: 1.5rem; } }
+  header .nav-link {
     color: #FFFFFF;
     margin: 0;
     font-size: 2rem;
     font-weight: 400;
     font-style: normal; }
-
-header .nav-link {
-  color: #FFFFFF;
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 400;
-  font-style: normal; }
+    @media (max-width: 1100px) {
+      header .nav-link {
+        font-size: 1.5rem; } }
+  header .navbar-toggler {
+    background: rgba(255, 255, 255, 0.8); }
 
 .NombrePresentadores, .DiasPrograma, .HoraPrograma {
   display: flex;
@@ -219,7 +228,7 @@ header .nav-link {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "logo contacto redes";
   align-items: center; }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .contenedorFooter {
       grid-template-columns: 1fr;
       grid-template-rows: minmax(100px, auto);
@@ -274,6 +283,12 @@ header .nav-link {
       font-size: 1.5rem;
       font-weight: 400;
       font-style: normal; }
+      @media (max-width: 1300px) {
+        .contenedorFooter .iconTexto p {
+          font-size: 1.25rem; } }
+      @media (max-width: 600px) {
+        .contenedorFooter .iconTexto p {
+          font-size: 1rem; } }
 
 .contenedor {
   display: grid;
@@ -294,13 +309,13 @@ header .nav-link {
       grid-template-columns: 1fr;
       grid-template-areas: "contenedor"; } }
 
-.contenedor-topCanciones, .contenedor-bandaMes {
+.contenedor-topCanciones {
   display: grid;
   grid-template-columns: 1fr 1300px 1fr;
   grid-template-areas: ". contenedor .";
   background: rgba(255, 255, 255, 0.1); }
   @media (max-width: 81.25rem) {
-    .contenedor-topCanciones, .contenedor-bandaMes {
+    .contenedor-topCanciones {
       grid-template-columns: 1fr;
       grid-template-areas: "contenedor"; } }
 
@@ -638,12 +653,17 @@ header .nav-link {
 
 .artistaMusica {
   grid-area: contenedor;
-  border: 2px solid #FFFFFF;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr); }
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "frame frame frame texto texto"; }
+  @media (max-width: 900px) {
+    .artistaMusica {
+      grid-template-columns: 1fr;
+      grid-template-areas: "frame" "texto";
+      margin-top: 150px; } }
   .artistaMusica .frameVideo {
-    grid-column: 1/4;
+    grid-area: frame;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -651,12 +671,15 @@ header .nav-link {
     .artistaMusica .frameVideo iframe {
       width: 80%; }
   .artistaMusica .descripcion {
-    grid-column: 4/6;
+    grid-area: texto;
     padding-right: 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center; }
+    @media (max-width: 900px) {
+      .artistaMusica .descripcion {
+        padding: 0 20px; } }
     .artistaMusica .descripcion h3 {
       color: #FFFFFF;
       margin: 0;
@@ -672,7 +695,6 @@ header .nav-link {
           font-size: 2rem; } }
       @media (max-width: 600px) {
         .artistaMusica .descripcion h3 {
-          color: red;
           font-size: 1.125rem; } }
     .artistaMusica .descripcion p {
       color: #FFFFFF;
@@ -689,12 +711,10 @@ header .nav-link {
           font-size: 1.5rem; } }
       @media (max-width: 600px) {
         .artistaMusica .descripcion p {
-          color: greenyellow;
           font-size: 1.125rem; } }
 
 .topCanciones {
   grid-area: contenedor;
-  border: 2px solid #FFFFFF;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -702,6 +722,9 @@ header .nav-link {
   @media (max-width: 1000px) {
     .topCanciones {
       grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 700px) {
+    .topCanciones {
+      grid-template-columns: 1fr; } }
   .topCanciones h2 {
     grid-column: 1/-1;
     padding: 2.5rem 0;
@@ -718,7 +741,6 @@ header .nav-link {
         font-size: 2rem; } }
     @media (max-width: 600px) {
       .topCanciones h2 {
-        color: red;
         font-size: 1.125rem; } }
 
 .tituloBanda {
@@ -742,24 +764,33 @@ header .nav-link {
 .fondo-banda {
   grid-column: 1/-1;
   grid-row: 1/2;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: .3; }
+  @media (max-width: 1300px) {
+    .fondo-banda {
+      grid-area: contenedor; } }
 
 .bandaMes {
+  margin: 0;
   grid-area: contenedor;
-  width: 100%;
   grid-row: 1/2;
   display: grid;
+  grid-template-rows: auto;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "p p" "img1 img2";
   justify-items: center;
   align-items: center;
   padding: 10px 3.75rem; }
+  @media (max-width: 700px) {
+    .bandaMes {
+      grid-template-columns: 1fr;
+      grid-template-areas: "p" "img1"  "img2"; } }
   .bandaMes p {
-    grid-column: 1/3;
+    grid-area: p;
     color: #FFFFFF;
     margin: 0;
     font-size: 1.875rem;
@@ -774,15 +805,17 @@ header .nav-link {
         font-size: 1.5rem; } }
     @media (max-width: 600px) {
       .bandaMes p {
-        color: greenyellow;
         font-size: 1.125rem; } }
   .bandaMes img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 90%;
-    width: auto;
-    border: 2px solid rebeccapurple; }
+    height: auto;
+    width: 90%; }
+  .bandaMes img:nth-child(1) {
+    grid-area: img1; }
+  .bandaMes img:nth-child(2) {
+    grid-area: img2; }
 
 .banda_Playlist {
   grid-area: contenedor;

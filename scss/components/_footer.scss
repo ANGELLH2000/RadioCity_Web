@@ -54,6 +54,7 @@
         }
         p{
             @include style_texto($blanco,1.5rem,2,1);
+            @include footer-responsive-p;
         }
     }
 }

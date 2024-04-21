@@ -1,3 +1,12 @@
+@mixin artistaMusica-responsive{
+    @media(max-width:900px){
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "frame"
+        "texto";
+        margin-top: 150px;
+    }
+}
 @mixin h2-h3{
     @media(max-width:1300px){
         font-size: 2rem;
@@ -6,7 +15,6 @@
         font-size: 2rem;
     }
     @media(max-width:600px){
-        color: red;
         font-size: 1.125rem;
     }
 }
@@ -18,7 +26,6 @@
         font-size: 1.5rem;
     }
     @media(max-width:600px){
-        color: greenyellow;
         font-size: 1.125rem;
     }
 }
@@ -26,10 +33,20 @@
     @media(max-width:1000px){
         grid-template-columns: repeat(2,1fr);
     }
-    @media(max-width:800px){
-        
+    @media(max-width:700px){
+        grid-template-columns: 1fr;
     }
     @media(max-width:600px){
         
     }
+}
+@mixin bandaMes_responsive{
+    @media(max-width:700px){
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "p"
+        "img1" 
+        "img2";
+    }
+    
 }
