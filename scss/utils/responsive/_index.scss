@@ -1,0 +1,35 @@
+
+@mixin presentacion_responsive-p{
+    @media(max-width:1300px){
+        @include style_texto($blanco,2rem,2,1);
+    }
+    @media(max-width:800px){
+        @include style_texto($blanco,1.5rem,2,1);
+    }
+    @media(max-width:600px){
+        @include style_texto($blanco,1rem,2,1);
+        
+    }
+}
+@mixin presentacion_responsive-img{
+    @media(max-width:1300px){
+        height: 60px;
+    }
+    @media(max-width:800px){
+        height: 40px;   
+    }
+    @media(max-width:600px){
+        height: 30px;     
+    }
+}
+@mixin playlist_responsive-h2{
+    @media(max-width:1300px){
+        @include style_texto($blanco,3.125rem,2,1);  
+    }
+    @media(max-width:1000px){
+        @include style_texto($blanco,1.875rem,2,1);  
+    }
+    @media(max-width:600px){
+        @include style_texto($blanco,1.25rem,2,1);   
+    }
+}

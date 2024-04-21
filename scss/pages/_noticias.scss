@@ -1,12 +1,16 @@
 .section_noticias{
     grid-area: contenedor;
-    border: 2px solid $blanco;
-    margin: 200px 2.5rem;
+    margin: 150px 0;
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 100px;
 
     article{
         @extend %noticia;
+        a{  
+            h4{
+                @include article_responsive-h4;
+            }
+        }
     }
 }

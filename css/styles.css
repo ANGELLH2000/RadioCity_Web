@@ -66,7 +66,8 @@ header .nav-link {
     font-size: 1.25rem;
     font-weight: 300; }
   .NombrePresentadores p:nth-child(2), .DiasPrograma p:nth-child(2), .HoraPrograma p:nth-child(2), .NombrePresentadores span, .DiasPrograma span, .HoraPrograma span {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: 400; }
 
 .target .bottom .target-hora {
   display: flex;
@@ -126,6 +127,13 @@ header .nav-link {
   display: flex;
   flex-direction: column;
   gap: 2.5rem; }
+  @media (max-width: 600px) {
+    .target {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between; } }
   .target .top, .target .bottom {
     display: flex;
     flex-direction: row;
@@ -137,6 +145,9 @@ header .nav-link {
     flex-direction: row;
     align-items: center;
     gap: 10px; }
+    @media (max-width: 800px) {
+      .target .top div {
+        gap: 1px; } }
     .target .top div img {
       height: 1.25rem; }
     .target .top div p {
@@ -145,11 +156,17 @@ header .nav-link {
       font-size: 1.125rem;
       font-weight: 600;
       font-style: normal; }
+      @media (max-width: 600px) {
+        .target .top div p {
+          font-size: 14px; } }
   .target .top p {
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
     font-style: normal; }
+    @media (max-width: 600px) {
+      .target .top p {
+        font-size: 14px; } }
   .target h5 {
     color: #FFFFFF;
     margin: 0;
@@ -157,6 +174,21 @@ header .nav-link {
     font-weight: 400;
     font-style: normal;
     align-self: center; }
+    @media (max-width: 800px) {
+      .target h5 {
+        font-size: 1.75rem; } }
+    @media (max-width: 600px) {
+      .target h5 {
+        font-size: 1.25rem; } }
+  @media (max-width: 800px) {
+    .target .bottom .target-hora h5 {
+      font-size: .875rem; } }
+  @media (max-width: 600px) {
+    .target .bottom .target-hora h5 {
+      font-size: .75rem; } }
+  @media (max-width: 600px) {
+    .target .bottom .target-hora p {
+      font-size: 1.125rem; } }
 
 .color_estado_red {
   border-radius: .625rem;
@@ -245,7 +277,7 @@ header .nav-link {
 
 .contenedor {
   display: grid;
-  grid-template-columns: 1fr 1400px 1fr;
+  grid-template-columns: 1fr 1300px 1fr;
   grid-template-areas: ". contenedor ."; }
   @media (max-width: 81.25rem) {
     .contenedor {
@@ -254,7 +286,7 @@ header .nav-link {
 
 .FooterGeneral {
   display: grid;
-  grid-template-columns: 1fr 1400px 1fr;
+  grid-template-columns: 1fr 1300px 1fr;
   grid-template-areas: ". contenedor .";
   background: #333333; }
   @media (max-width: 81.25rem) {
@@ -264,7 +296,7 @@ header .nav-link {
 
 .contenedor-topCanciones, .contenedor-bandaMes {
   display: grid;
-  grid-template-columns: 1fr 1400px 1fr;
+  grid-template-columns: 1fr 1300px 1fr;
   grid-template-areas: ". contenedor .";
   background: rgba(255, 255, 255, 0.1); }
   @media (max-width: 81.25rem) {
@@ -334,6 +366,30 @@ header .nav-link {
     height: 6.25rem;
     border-radius: 50%; }
 
+@media (max-width: 1300px) {
+  .NombrePresentadores p:nth-child(1), .DiasPrograma p:nth-child(1), .HoraPrograma p:nth-child(1) {
+    font-size: 1.25rem; } }
+
+@media (max-width: 800px) {
+  .NombrePresentadores p:nth-child(1), .DiasPrograma p:nth-child(1), .HoraPrograma p:nth-child(1) {
+    font-size: 1rem; } }
+
+@media (max-width: 600px) {
+  .NombrePresentadores p:nth-child(1), .DiasPrograma p:nth-child(1), .HoraPrograma p:nth-child(1) {
+    font-size: 1rem; } }
+
+@media (max-width: 1300px) {
+  .NombrePresentadores p:nth-child(2), .NombrePresentadores span, .DiasPrograma p:nth-child(2), .DiasPrograma span, .HoraPrograma p:nth-child(2), .HoraPrograma span {
+    font-size: 1.5rem; } }
+
+@media (max-width: 800px) {
+  .NombrePresentadores p:nth-child(2), .NombrePresentadores span, .DiasPrograma p:nth-child(2), .DiasPrograma span, .HoraPrograma p:nth-child(2), .HoraPrograma span {
+    font-size: 1.25rem; } }
+
+@media (max-width: 600px) {
+  .NombrePresentadores p:nth-child(2), .NombrePresentadores span, .DiasPrograma p:nth-child(2), .DiasPrograma span, .HoraPrograma p:nth-child(2), .HoraPrograma span {
+    font-size: 1.1875rem; } }
+
 .NombrePresentadores {
   grid-area: nombre_presentadores; }
 
@@ -354,11 +410,58 @@ header .nav-link {
     font-style: normal; }
   .DescripcionPrograma p:nth-child(1) {
     color: rgba(255, 255, 255, 0.8);
+    margin: 0;
     font-size: 1.25rem;
-    font-weight: 300; }
+    font-weight: 300;
+    font-style: normal; }
+    @media (max-width: 1300px) {
+      .DescripcionPrograma p:nth-child(1) {
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 300;
+        font-style: normal; } }
+    @media (max-width: 800px) {
+      .DescripcionPrograma p:nth-child(1) {
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 300;
+        font-style: normal; } }
+    @media (max-width: 600px) {
+      .DescripcionPrograma p:nth-child(1) {
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 300;
+        font-style: normal; } }
   .DescripcionPrograma p:nth-child(2) {
+    color: #FFFFFF;
+    margin: 0;
     font-size: 1.5rem;
-    font-weight: 400; }
+    font-weight: 300;
+    font-style: normal; }
+    @media (max-width: 1300px) {
+      .DescripcionPrograma p:nth-child(2) {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: normal; } }
+    @media (max-width: 800px) {
+      .DescripcionPrograma p:nth-child(2) {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 300;
+        font-style: normal; } }
+    @media (max-width: 600px) {
+      .DescripcionPrograma p:nth-child(2) {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 300;
+        font-style: normal; } }
 
 .programacionDiaria {
   display: grid;
@@ -384,11 +487,20 @@ header .nav-link {
 
 .section_noticias {
   grid-area: contenedor;
-  border: 2px solid #FFFFFF;
-  margin: 200px 2.5rem;
+  margin: 150px 0;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 100px; }
+  @media (max-width: 1300px) {
+    .section_noticias article a h4 {
+      font-size: 2.5rem; } }
+  @media (max-width: 800px) {
+    .section_noticias article a h4 {
+      font-size: 1.75rem; } }
+  @media (max-width: 600px) {
+    .section_noticias article a h4 {
+      font-size: 1rem;
+      padding: 1rem 1.5rem; } }
 
 .fondoContacto {
   width: 100%;
@@ -415,6 +527,7 @@ header .nav-link {
     justify-content: center;
     align-items: center; }
     .contenedorContacto .tituloContacto h2 {
+      text-align: center;
       color: rgba(255, 255, 255, 0.8);
       margin: 0;
       font-size: 4.375rem;
@@ -422,14 +535,32 @@ header .nav-link {
       font-style: normal;
       margin: 0;
       margin-bottom: 20px; }
+      @media (max-width: 1300px) {
+        .contenedorContacto .tituloContacto h2 {
+          font-size: 4.375rem; } }
+      @media (max-width: 800px) {
+        .contenedorContacto .tituloContacto h2 {
+          font-size: 2.5rem; } }
+      @media (max-width: 600px) {
+        .contenedorContacto .tituloContacto h2 {
+          font-size: 1.25rem; } }
     .contenedorContacto .tituloContacto p {
       max-width: 900px;
       color: rgba(255, 255, 255, 0.8);
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 400;
       font-style: normal;
       text-align: center; }
+      @media (max-width: 1300px) {
+        .contenedorContacto .tituloContacto p {
+          font-size: 2rem; } }
+      @media (max-width: 800px) {
+        .contenedorContacto .tituloContacto p {
+          font-size: 1.75rem; } }
+      @media (max-width: 600px) {
+        .contenedorContacto .tituloContacto p {
+          font-size: 1rem; } }
   .contenedorContacto .formulario {
     width: 100%;
     padding: 30px 20px;
@@ -497,13 +628,18 @@ header .nav-link {
   height: 900px;
   object-fit: cover;
   opacity: .3;
-  grid-column: 1/-1;
+  grid-column: 1/4;
   grid-row: 1/2;
-  z-index: -1; }
+  z-index: -1;
+  overflow: hidden; }
+  @media (max-width: 1300px) {
+    .musica_fondo {
+      grid-column: 1/2; } }
 
 .artistaMusica {
   grid-area: contenedor;
   border: 2px solid #FFFFFF;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr); }
   .artistaMusica .frameVideo {
@@ -516,6 +652,7 @@ header .nav-link {
       width: 80%; }
   .artistaMusica .descripcion {
     grid-column: 4/6;
+    padding-right: 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -527,6 +664,16 @@ header .nav-link {
       font-weight: 600;
       font-style: normal;
       text-align: center; }
+      @media (max-width: 1300px) {
+        .artistaMusica .descripcion h3 {
+          font-size: 2rem; } }
+      @media (max-width: 800px) {
+        .artistaMusica .descripcion h3 {
+          font-size: 2rem; } }
+      @media (max-width: 600px) {
+        .artistaMusica .descripcion h3 {
+          color: red;
+          font-size: 1.125rem; } }
     .artistaMusica .descripcion p {
       color: #FFFFFF;
       margin: 0;
@@ -534,6 +681,16 @@ header .nav-link {
       font-weight: 300;
       font-style: normal;
       line-height: 40px; }
+      @media (max-width: 1300px) {
+        .artistaMusica .descripcion p {
+          font-size: 1.75rem; } }
+      @media (max-width: 800px) {
+        .artistaMusica .descripcion p {
+          font-size: 1.5rem; } }
+      @media (max-width: 600px) {
+        .artistaMusica .descripcion p {
+          color: greenyellow;
+          font-size: 1.125rem; } }
 
 .topCanciones {
   grid-area: contenedor;
@@ -542,6 +699,9 @@ header .nav-link {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   row-gap: 1.875rem; }
+  @media (max-width: 1000px) {
+    .topCanciones {
+      grid-template-columns: repeat(2, 1fr); } }
   .topCanciones h2 {
     grid-column: 1/-1;
     padding: 2.5rem 0;
@@ -550,6 +710,16 @@ header .nav-link {
     font-size: 2rem;
     font-weight: 600;
     font-style: normal; }
+    @media (max-width: 1300px) {
+      .topCanciones h2 {
+        font-size: 2rem; } }
+    @media (max-width: 800px) {
+      .topCanciones h2 {
+        font-size: 2rem; } }
+    @media (max-width: 600px) {
+      .topCanciones h2 {
+        color: red;
+        font-size: 1.125rem; } }
 
 .tituloBanda {
   grid-area: contenedor;
@@ -565,15 +735,29 @@ header .nav-link {
     font-weight: 600;
     font-style: normal;
     text-transform: uppercase; }
+    @media (max-width: 600px) {
+      .tituloBanda h2 {
+        font-size: 1.125rem; } }
+
+.fondo-banda {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .3; }
 
 .bandaMes {
   grid-area: contenedor;
+  width: 100%;
+  grid-row: 1/2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 20.0625rem;
   justify-items: center;
   align-items: center;
-  padding: 0 3.75rem; }
+  padding: 10px 3.75rem; }
   .bandaMes p {
     grid-column: 1/3;
     color: #FFFFFF;
@@ -582,13 +766,23 @@ header .nav-link {
     font-weight: 300;
     font-style: normal;
     text-align: center; }
+    @media (max-width: 1300px) {
+      .bandaMes p {
+        font-size: 1.75rem; } }
+    @media (max-width: 800px) {
+      .bandaMes p {
+        font-size: 1.5rem; } }
+    @media (max-width: 600px) {
+      .bandaMes p {
+        color: greenyellow;
+        font-size: 1.125rem; } }
   .bandaMes img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: auto;
     height: 90%;
-    background: rebeccapurple; }
+    width: auto;
+    border: 2px solid rebeccapurple; }
 
 .banda_Playlist {
   grid-area: contenedor;
@@ -601,25 +795,32 @@ header .nav-link {
     width: 55%; }
 
 .video {
-  width: 100%;
-  height: 43.75rem;
   grid-column: 1/-1;
   grid-row: 1/2;
+  width: 100%;
+  height: 100vh;
   z-index: -1;
   opacity: .5;
   overflow: hidden; }
   .video video {
     width: 100%; }
+    @media (max-width: 1300px) {
+      .video video {
+        width: auto;
+        height: 100%; } }
 
 .presentacion {
+  grid-area: contenedor;
   grid-row: 1/2;
-  grid-column: 2/3;
-  border: 2px solid #FFFFFF;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 1300px) {
+    .presentacion {
+      grid-column: 1/-1; } }
   .presentacion p {
     max-width: 60%;
     color: #FFFFFF;
@@ -628,8 +829,38 @@ header .nav-link {
     font-weight: 400;
     font-style: normal;
     text-align: center; }
+    @media (max-width: 1300px) {
+      .presentacion p {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: normal; } }
+    @media (max-width: 800px) {
+      .presentacion p {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: normal; } }
+    @media (max-width: 600px) {
+      .presentacion p {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: normal; } }
     .presentacion p img {
       height: 60px; }
+      @media (max-width: 1300px) {
+        .presentacion p img {
+          height: 60px; } }
+      @media (max-width: 800px) {
+        .presentacion p img {
+          height: 40px; } }
+      @media (max-width: 600px) {
+        .presentacion p img {
+          height: 30px; } }
   .presentacion p:nth-child(3) {
     padding-top: 3.125rem;
     color: #FFFFFF;
@@ -637,10 +868,30 @@ header .nav-link {
     font-size: 30px;
     font-weight: 300;
     font-style: normal; }
+    @media (max-width: 1300px) {
+      .presentacion p:nth-child(3) {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: normal; } }
+    @media (max-width: 800px) {
+      .presentacion p:nth-child(3) {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: normal; } }
+    @media (max-width: 600px) {
+      .presentacion p:nth-child(3) {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: normal; } }
 
 .playlist {
-  grid-row: 2/3;
-  grid-column: 2/3;
+  grid-area: contenedor;
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -658,6 +909,27 @@ header .nav-link {
       font-weight: 400;
       font-style: normal;
       text-align: center; }
+      @media (max-width: 1300px) {
+        .playlist div:nth-child(1) h2 {
+          color: #FFFFFF;
+          margin: 0;
+          font-size: 3.125rem;
+          font-weight: 400;
+          font-style: normal; } }
+      @media (max-width: 1000px) {
+        .playlist div:nth-child(1) h2 {
+          color: #FFFFFF;
+          margin: 0;
+          font-size: 1.875rem;
+          font-weight: 400;
+          font-style: normal; } }
+      @media (max-width: 600px) {
+        .playlist div:nth-child(1) h2 {
+          color: #FFFFFF;
+          margin: 0;
+          font-size: 1.25rem;
+          font-weight: 400;
+          font-style: normal; } }
     .playlist div:nth-child(1) div {
       width: 48%;
       height: .5rem;
@@ -669,8 +941,8 @@ header .nav-link {
       align-self: self-end; }
   .playlist .spotify {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 3.125rem; }
     .playlist .spotify iframe {
       width: 80%; }

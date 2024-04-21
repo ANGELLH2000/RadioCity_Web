@@ -55,6 +55,12 @@
 }
 .NombrePresentadores,.DiasPrograma,.HoraPrograma{
     @extend %card_basic;
+    p:nth-child(1){
+        @include card_basic-p1;
+    }
+    p:nth-child(2),span{
+        @include card_basic-p2;
+    }
 }
 .NombrePresentadores{
     grid-area: nombre_presentadores;
@@ -74,13 +80,12 @@
         font-style: map-get($map: $fonts-style, $key:1 );
     }
     p:nth-child(1){
-        color: $blanco2;
-        font-size: 1.25rem;//20px
-        font-weight: map-get($map:$fonts-weight , $key:1 );
+        @include style_texto($blanco2,1.25rem,1,1);
+        @include DescripcionPrograma-p1;
     }
     p:nth-child(2){
-        font-size: 1.5rem;//24px
-        font-weight: map-get($map:$fonts-weight , $key:2 );
+        @include style_texto($blanco,1.5rem,1,1);
+        @include DescripcionPrograma-p2;
     }
 }
 .programacionDiaria{

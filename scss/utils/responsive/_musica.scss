@@ -1,0 +1,35 @@
+@mixin h2-h3{
+    @media(max-width:1300px){
+        font-size: 2rem;
+    }
+    @media(max-width:800px){
+        font-size: 2rem;
+    }
+    @media(max-width:600px){
+        color: red;
+        font-size: 1.125rem;
+    }
+}
+@mixin musica_p{
+    @media(max-width:1300px){
+        font-size: 1.75rem;
+    }
+    @media(max-width:800px){
+        font-size: 1.5rem;
+    }
+    @media(max-width:600px){
+        color: greenyellow;
+        font-size: 1.125rem;
+    }
+}
+@mixin topCanciones-responsive{
+    @media(max-width:1000px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media(max-width:800px){
+        
+    }
+    @media(max-width:600px){
+        
+    }
+}

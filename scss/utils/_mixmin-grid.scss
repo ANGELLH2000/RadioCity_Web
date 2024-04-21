@@ -1,6 +1,6 @@
 @mixin contenedor-desktop($fondo:"transparent"){
     display: grid;
-    grid-template-columns: 1fr 1400px 1fr;
+    grid-template-columns: 1fr 1300px 1fr;
     grid-template-areas: ". contenedor .";
     @if $fondo=="transparent"{}
     @else{

@@ -19,6 +19,7 @@
     }
     p:nth-child(2),span{
         font-size: 1.5rem;//24px
+        font-weight: map-get($map:$fonts-weight , $key:2 );
     }
 }
 %card_basic2{

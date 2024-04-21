@@ -23,13 +23,16 @@
         justify-content: center;
         align-items: center;
         h2{
+            text-align: center; 
             @include style_texto($blanco2,4.375rem,3,1);
+            @include tituloContacto-h2;
             margin: 0;
             margin-bottom: 20px;
         }
         p{
             max-width: 900px;
-            @include style_texto($blanco2,2rem,2,1);
+            @include style_texto($blanco2,2.5rem,2,1);
+            @include tituloContacto-p;
             text-align: center;
         }
     }

@@ -12,6 +12,11 @@
     background: $gris;
     padding: 1.25rem .9375rem;
     @include flex-vertical-gap(2.5rem);
+    @media(max-width:600px){
+        min-height: auto;
+        @include flex-vertical-gap(20px);
+        justify-content: space-between;
+    }
     .top,.bottom{
         display: flex;
         flex-direction: row;
@@ -23,24 +28,45 @@
             margin: 0;
             @include flex-horizontal;
             gap: 10px;
+            @media(max-width:800px){
+                gap: 1px;
+            }
             img{
                 height: 1.25rem;
             }
             p{
                 @include style_texto($blanco2,1.125rem,3,1);
+                @media(max-width:600px){
+                    font-size: 14px;
+                }
             }
         }
         p{
             @include style_texto("",1rem,3,1);
+            @media(max-width:600px){
+                font-size: 14px;
+            }
         }
     }
     
     h5{
         @include style_texto($blanco,2rem,2,1);
+        @media(max-width:800px){
+            font-size: 1.75rem;
+        }
+        @media(max-width:600px){
+            font-size: 1.25rem;
+        }
         align-self: center;
     }
     .bottom .target-hora{
         @extend %card_basic2;
+        h5{
+            @include card_basic2-h5;  
+        }
+        p{
+            @include card_basic2-p;
+        }
     }
     
 }

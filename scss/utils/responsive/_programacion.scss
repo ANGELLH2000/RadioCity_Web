@@ -45,3 +45,60 @@
         row-gap: 2.5rem;
     }
 }
+@mixin DescripcionPrograma-p1{
+    @media(max-width:1300px){
+        @include style_texto($blanco2,1.25rem,1,1);
+    }
+    @media(max-width:800px){
+        @include style_texto($blanco2,1.25rem,1,1);
+    }
+    @media(max-width:600px){
+        @include style_texto($blanco2,1rem,1,1);
+    }
+}
+@mixin DescripcionPrograma-p2{
+    @media(max-width:1300px){
+        @include style_texto($blanco,1.5rem,1,1);
+    }
+    @media(max-width:800px){
+        @include style_texto($blanco,1.25rem,1,1);
+    }
+    @media(max-width:600px){
+        @include style_texto($blanco,1.125rem,1,1);
+    }
+}
+@mixin card_basic-p1{
+    @media(max-width:1300px){
+        font-size: 1.25rem;
+    }
+    @media(max-width:800px){
+        font-size: 1rem;
+    }
+    @media(max-width:600px){
+        font-size: 1rem;
+    }
+}
+@mixin card_basic-p2{
+    @media(max-width:1300px){
+        font-size: 1.5rem;
+    }
+    @media(max-width:800px){
+        font-size: 1.25rem;
+    }
+    @media(max-width:600px){
+        font-size: 1.1875rem;
+    }
+}
+@mixin card_basic2-h5{
+    @media(max-width:800px){
+        font-size: .875rem;
+    }
+    @media(max-width:600px){
+        font-size: .75rem;
+    }
+}
+@mixin card_basic2-p{
+    @media(max-width:600px){
+        font-size: 1.125rem;
+    }
+}
