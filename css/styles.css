@@ -589,7 +589,10 @@ header {
       align-items: center; }
       .contenedorContacto .formulario form .form-group {
         position: relative;
-        margin: 12px 0; }
+        margin: 12px 0;
+        display: flex;
+        flex-direction: column;
+        width: 60%; }
       .contenedorContacto .formulario form .form-group input, .contenedorContacto .formulario form .form-group textarea {
         padding: 8px 10px;
         border-radius: 5px;

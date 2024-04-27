@@ -49,6 +49,9 @@
             .form-group {
                 position: relative;
                 margin: 12px 0;
+                display: flex;
+                flex-direction: column;
+                width: 60%;
             }
             
             .form-group input,.form-group textarea {
